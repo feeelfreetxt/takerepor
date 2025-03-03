@@ -1,0 +1,1190 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentação Completa - Wallet Digital</title>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body { 
+            padding: 20px; 
+            background-color: #f8f9fa; 
+        }
+        .component-card {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+        .tech-logo {
+            max-width: 150px;
+            height: auto;
+            margin: 10px;
+        }
+        .code-example {
+            background: #2d2d2d;
+            color: #fff;
+            padding: 15px;
+            border-radius: 5px;
+            font-family: monospace;
+            margin: 10px 0;
+        }
+        .reference-link {
+            display: block;
+            padding: 5px 0;
+            color: #0d6efd;
+            text-decoration: none;
+        }
+        .diagram-container {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        .nav-tabs { margin-bottom: 20px; }
+        .feature-icon {
+            font-size: 2rem;
+            color: #0d6efd;
+            margin-bottom: 1rem;
+        }
+        .resource-card {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            transition: transform 0.2s;
+        }
+        .resource-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .resource-description {
+            color: #6c757d;
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+        }
+        .free-tag {
+            background: #28a745;
+            color: white;
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 0.8rem;
+            display: inline-block;
+            margin-left: 8px;
+        }
+        .mockup-container {
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+        .nav-item {
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .nav-item:hover {
+            background: rgba(255,255,255,0.1);
+        }
+        .card {
+            border: none;
+            border-radius: 10px;
+        }
+        .action-button {
+            cursor: pointer;
+            padding: 10px;
+            border-radius: 10px;
+            transition: all 0.3s;
+        }
+        .action-button:hover {
+            background: rgba(255,255,255,0.1);
+        }
+        .transaction-item {
+            padding: 10px;
+            border-radius: 8px;
+            background: rgba(255,255,255,0.05);
+        }
+        .color-sample {
+            width: 60px;
+            height: 60px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 0.8rem;
+        }
+        .icon-circle {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .activity-icon {
+            width: 36px;
+            height: 36px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .nav-item {
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .nav-item:hover {
+            background: rgba(255,255,255,0.1);
+        }
+        .nav-item.active {
+            background: rgba(255,255,255,0.1);
+        }
+        .action-button {
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .action-button:hover {
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="mb-4">Wallet Digital - Documentação Completa</h1>
+        
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" data-bs-toggle="tab" href="#diagrams">Diagramas</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" href="#components">Componentes</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" href="#stack">Stack Técnico</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" href="#resources">Recursos</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" href="#architecture">Arquitetura</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" href="#design">Design</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" href="#api">API</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" href="#security">Segurança</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" href="#flows">Fluxos</a>
+            </li>
+        </ul>
+
+        <div class="tab-content">
+            <!-- Aba de Diagramas -->
+            <div class="tab-pane fade show active" id="diagrams">
+                <div class="diagram-container">
+                    <h2>Arquitetura do Sistema</h2>
+                    <div class="mermaid">
+                        graph TB
+                            subgraph Frontend
+                            A[React/Next.js] --> B[Interface do Usuário]
+                            B --> C[Componentes]
+                            C --> D[Forms]
+                            C --> E[Dashboard]
+                            C --> F[Carteira]
+                            end
+                            
+                            subgraph Backend
+                            G[Node.js/Express] --> H[API REST]
+                            H --> I[Autenticação]
+                            H --> J[Processamento]
+                            H --> K[Validação]
+                            end
+                            
+                            subgraph Database
+                            L[(MongoDB)] --> M[Clientes]
+                            L --> N[Transações]
+                            L --> O[Acordos]
+                            end
+                            
+                            B --> H
+                            J --> L
+                    </div>
+                </div>
+
+                <div class="diagram-container">
+                    <h2>Fluxo de Processamento</h2>
+                    <div class="mermaid">
+                        sequenceDiagram
+                            participant U as Usuário
+                            participant F as Frontend
+                            participant B as Backend
+                            participant D as Database
+                            participant E as APIs Externas
+                            
+                            U->>F: Login
+                            F->>B: Autenticar
+                            B->>D: Verificar Credenciais
+                            D-->>B: Confirmação
+                            B-->>F: Token JWT
+                            
+                            U->>F: Criar Acordo
+                            F->>B: Enviar Dados
+                            B->>E: Validar Informações
+                            E-->>B: Confirmação
+                            B->>D: Salvar Acordo
+                            D-->>B: Sucesso
+                            B-->>F: Atualizar UI
+                            F-->>U: Confirmação
+                    </div>
+                </div>
+
+                <div class="diagram-container">
+                    <h2>Componentes do Sistema</h2>
+                    <div class="mermaid">
+                        classDiagram
+                            class WalletSystem {
+                                +login()
+                                +processAgreement()
+                                +calculateValues()
+                                +generateReports()
+                            }
+                            
+                            class Client {
+                                +String name
+                                +String region
+                                +String category
+                                +getDetails()
+                                +updateStatus()
+                            }
+                            
+                            class Agreement {
+                                +Float value
+                                +Float discount
+                                +Date deadline
+                                +calculate()
+                                +approve()
+                            }
+                            
+                            class Transaction {
+                                +String type
+                                +Float amount
+                                +Date date
+                                +process()
+                                +validate()
+                            }
+                            
+                            WalletSystem --> Client
+                            WalletSystem --> Agreement
+                            WalletSystem --> Transaction
+                    </div>
+                </div>
+            </div>
+
+            <!-- Aba de Componentes -->
+            <div class="tab-pane fade" id="components">
+                <div class="component-card">
+                    <h2>Componentes do Sistema</h2>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h4>WalletSystem</h4>
+                            <div class="code-example">
+                                class WalletSystem {
+                                    constructor() {
+                                        this.clients = [];
+                                        this.agreements = [];
+                                        this.transactions = [];
+                                    }
+                                    
+                                    async login(credentials) {
+                                        // Implementação
+                                    }
+                                    
+                                    async processAgreement(data) {
+                                        // Implementação
+                                    }
+                                }
+                            </div>
+                            <a href="https://nextjs.org/docs/api-reference" class="reference-link">Next.js API Reference</a>
+                            <a href="https://redux-toolkit.js.org/api/createSlice" class="reference-link">Redux Toolkit Slices</a>
+                        </div>
+                        <div class="col-md-6">
+                            <h4>Client Management</h4>
+                            <div class="code-example">
+                                const ClientSchema = new Schema({
+                                    name: String,
+                                    region: String,
+                                    category: String,
+                                    status: String,
+                                    createdAt: Date
+                                });
+                            </div>
+                            <a href="https://mongoosejs.com/docs/guide.html" class="reference-link">Mongoose Schema Guide</a>
+                            <a href="https://www.mongodb.com/docs/manual/core/schema-validation/" class="reference-link">MongoDB Validation</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="component-card">
+                    <h2>Implementações Recomendadas</h2>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <h4>Autenticação</h4>
+                            <ul>
+                                <li><a href="https://next-auth.js.org/" class="reference-link">NextAuth.js</a></li>
+                                <li><a href="https://jwt.io/" class="reference-link">JWT Implementation</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-4">
+                            <h4>Processamento de Pagamentos</h4>
+                            <ul>
+                                <li><a href="https://stripe.com/docs/api" class="reference-link">Stripe API</a></li>
+                                <li><a href="https://developer.paypal.com/docs/api/overview/" class="reference-link">PayPal API</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-4">
+                            <h4>Relatórios</h4>
+                            <ul>
+                                <li><a href="https://www.chartjs.org/" class="reference-link">Chart.js</a></li>
+                                <li><a href="https://github.com/mrdoob/three.js/" class="reference-link">Three.js</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Aba de Stack Técnico -->
+            <div class="tab-pane fade" id="stack">
+                <!-- Conteúdo do arquivo technical_specs.html aqui -->
+                [CONTEÚDO DO STACK TÉCNICO]
+            </div>
+
+            <!-- Aba de Recursos -->
+            <div class="tab-pane fade" id="resources">
+                <div class="text-center mb-5">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <i class="fas fa-wallet feature-icon"></i>
+                            <h5>Wallet Digital</h5>
+                            <p>Gestão Financeira</p>
+                        </div>
+                        <div class="col-md-3">
+                            <i class="fas fa-handshake feature-icon"></i>
+                            <h5>Acordos</h5>
+                            <p>Negociações</p>
+                        </div>
+                        <div class="col-md-3">
+                            <i class="fas fa-chart-line feature-icon"></i>
+                            <h5>Analytics</h5>
+                            <p>Métricas e KPIs</p>
+                        </div>
+                        <div class="col-md-3">
+                            <i class="fas fa-shield-alt feature-icon"></i>
+                            <h5>Segurança</h5>
+                            <p>Proteção de Dados</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="component-card">
+                    <h2><i class="fas fa-tools"></i> Recursos e Ferramentas</h2>
+                    
+                    <!-- Design Patterns -->
+                    <div class="row mb-4">
+                        <div class="col-md-6">
+                            <div class="resource-card">
+                                <h4><i class="fas fa-puzzle-piece"></i> Design Patterns</h4>
+                                <div class="resource-description">
+                                    Padrões de projeto essenciais para software escalável e manutenível
+                                </div>
+                                <ul class="list-unstyled">
+                                    <li class="mb-3">
+                                        <strong>Refactoring Guru</strong> <span class="free-tag">Gratuito</span>
+                                        <p>Guia completo de padrões de projeto com exemplos práticos em várias linguagens. Útil para:</p>
+                                        <ul>
+                                            <li>Padrões Criacionais (Factory, Singleton para serviços)</li>
+                                            <li>Padrões Estruturais (Adapter para integrações com Supabase)</li>
+                                            <li>Padrões Comportamentais (Observer para real-time)</li>
+                                        </ul>
+                                        <a href="https://refactoring.guru/design-patterns" class="reference-link">Acessar Refactoring Guru</a>
+                                    </li>
+                                    <li>
+                                        <strong>Modern Web Patterns</strong> <span class="free-tag">Gratuito</span>
+                                        <p>Padrões específicos para aplicações web modernas. Relevante para:</p>
+                                        <ul>
+                                            <li>Arquitetura de componentes React</li>
+                                            <li>Gerenciamento de estado com Supabase</li>
+                                            <li>Otimização de performance</li>
+                                        </ul>
+                                        <a href="https://www.patterns.dev/" class="reference-link">Acessar Modern Web Patterns</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <!-- Segurança -->
+                        <div class="col-md-6">
+                            <div class="resource-card">
+                                <h4><i class="fas fa-shield-alt"></i> Segurança</h4>
+                                <div class="resource-description">
+                                    Práticas essenciais de segurança para aplicações financeiras
+                                </div>
+                                <ul class="list-unstyled">
+                                    <li class="mb-3">
+                                        <strong>OWASP Top 10</strong> <span class="free-tag">Gratuito</span>
+                                        <p>Principais vulnerabilidades web. Importante para:</p>
+                                        <ul>
+                                            <li>Proteção contra injeção SQL no Supabase</li>
+                                            <li>Autenticação segura</li>
+                                            <li>Exposição de dados sensíveis</li>
+                                        </ul>
+                                        <a href="https://owasp.org/www-project-top-ten/" class="reference-link">OWASP Top 10</a>
+                                    </li>
+                                    <li>
+                                        <strong>Security Cheat Sheets</strong> <span class="free-tag">Gratuito</span>
+                                        <p>Guias práticos de implementação segura:</p>
+                                        <ul>
+                                            <li>Políticas de senha</li>
+                                            <li>Proteção de APIs</li>
+                                            <li>Segurança em JWT</li>
+                                        </ul>
+                                        <a href="https://cheatsheetseries.owasp.org/" class="reference-link">Security Cheat Sheets</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Performance e Supabase -->
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="resource-card">
+                                <h4><i class="fas fa-tachometer-alt"></i> Performance</h4>
+                                <div class="resource-description">
+                                    Ferramentas para otimização e monitoramento
+                                </div>
+                                <ul class="list-unstyled">
+                                    <li class="mb-3">
+                                        <strong>Web Vitals</strong> <span class="free-tag">Gratuito</span>
+                                        <p>Métricas essenciais de performance:</p>
+                                        <ul>
+                                            <li>LCP (Largest Contentful Paint)</li>
+                                            <li>FID (First Input Delay)</li>
+                                            <li>CLS (Cumulative Layout Shift)</li>
+                                        </ul>
+                                        <a href="https://web.dev/measure/" class="reference-link">Web Vitals</a>
+                                    </li>
+                                    <li>
+                                        <strong>Lighthouse</strong> <span class="free-tag">Gratuito</span>
+                                        <p>Auditoria automática de:</p>
+                                        <ul>
+                                            <li>Performance geral</li>
+                                            <li>Acessibilidade</li>
+                                            <li>SEO</li>
+                                        </ul>
+                                        <a href="https://developers.google.com/web/tools/lighthouse" class="reference-link">Lighthouse</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <!-- Recursos Supabase -->
+                        <div class="col-md-6">
+                            <div class="resource-card">
+                                <h4><i class="fas fa-database"></i> Recursos Supabase</h4>
+                                <div class="resource-description">
+                                    Ferramentas gratuitas do Supabase para desenvolvimento
+                                </div>
+                                <ul class="list-unstyled">
+                                    <li class="mb-3">
+                                        <strong>Plano Gratuito</strong> <span class="free-tag">Gratuito</span>
+                                        <p>Recursos incluídos:</p>
+                                        <ul>
+                                            <li>Banco de dados PostgreSQL (500MB)</li>
+                                            <li>Autenticação ilimitada</li>
+                                            <li>50GB bandwidth/mês</li>
+                                            <li>Edge Functions (500K invocações)</li>
+                                        </ul>
+                                        <a href="https://supabase.com/pricing" class="reference-link">Supabase Free Tier</a>
+                                    </li>
+                                    <li>
+                                        <strong>Ferramentas de Desenvolvimento</strong> <span class="free-tag">Gratuito</span>
+                                        <p>Recursos para desenvolvimento:</p>
+                                        <ul>
+                                            <li>Dashboard de administração</li>
+                                            <li>API auto-gerada</li>
+                                            <li>Backups diários</li>
+                                            <li>Monitoramento em tempo real</li>
+                                        </ul>
+                                        <a href="https://supabase.com/docs/guides/platform" class="reference-link">Platform Guide</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Nova Aba de Arquitetura -->
+            <div class="tab-pane fade" id="architecture">
+                <div class="component-card">
+                    <h2><i class="fas fa-project-diagram"></i> Arquitetura Completa</h2>
+                    
+                    <!-- Organograma -->
+                    <div class="mb-4">
+                        <h4>Organograma do Projeto</h4>
+                        <div class="mermaid">
+                            graph TB
+                                CEO[CEO/Product Owner]
+                                TL[Tech Lead]
+                                FE[Frontend Dev]
+                                BE[Backend Dev]
+                                DBA[Database Admin]
+                                QA[QA Engineer]
+                                
+                                CEO --> TL
+                                TL --> FE
+                                TL --> BE
+                                TL --> DBA
+                                TL --> QA
+                                
+                                style CEO fill:#f9f,stroke:#333,stroke-width:2px
+                                style TL fill:#bbf,stroke:#333,stroke-width:2px
+                                style FE fill:#dfd,stroke:#333,stroke-width:2px
+                                style BE fill:#dfd,stroke:#333,stroke-width:2px
+                                style DBA fill:#dfd,stroke:#333,stroke-width:2px
+                                style QA fill:#dfd,stroke:#333,stroke-width:2px
+                        </div>
+                    </div>
+
+                    <!-- Arquitetura Técnica -->
+                    <div class="mb-4">
+                        <h4>Arquitetura Técnica</h4>
+                        <div class="mermaid">
+                            graph TB
+                                subgraph Client
+                                    UI[Next.js UI]
+                                    STATE[Redux Store]
+                                    UI --> STATE
+                                end
+                                
+                                subgraph API
+                                    EDGE[Edge Functions]
+                                    AUTH[Auth API]
+                                    CRUD[CRUD API]
+                                end
+                                
+                                subgraph Database
+                                    SUPABASE[Supabase]
+                                    STORAGE[Storage]
+                                    REALTIME[Realtime]
+                                end
+                                
+                                UI --> EDGE
+                                UI --> AUTH
+                                UI --> CRUD
+                                EDGE --> SUPABASE
+                                AUTH --> SUPABASE
+                                CRUD --> SUPABASE
+                                SUPABASE --> STORAGE
+                                SUPABASE --> REALTIME
+                                
+                                style UI fill:#ff9,stroke:#333,stroke-width:2px
+                                style SUPABASE fill:#9f9,stroke:#333,stroke-width:2px
+                                style EDGE fill:#99f,stroke:#333,stroke-width:2px
+                        </div>
+                    </div>
+
+                    <!-- Fluxo de Dados -->
+                    <div class="mb-4">
+                        <h4>Fluxo de Dados</h4>
+                        <div class="mermaid">
+                            sequenceDiagram
+                                participant U as Usuário
+                                participant F as Frontend
+                                participant A as Auth
+                                participant S as Supabase
+                                participant R as Realtime
+                                
+                                U->>F: Login
+                                F->>A: Autenticar
+                                A->>S: Verificar Credenciais
+                                S-->>F: JWT Token
+                                
+                                U->>F: Criar Acordo
+                                F->>S: Salvar Dados
+                                S->>R: Notificar Mudança
+                                R-->>F: Update UI
+                                F-->>U: Feedback
+                        </div>
+                    </div>
+
+                    <!-- Detalhes da Implementação -->
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="resource-card">
+                                <h4><i class="fas fa-code"></i> Frontend (Next.js)</h4>
+                                <ul>
+                                    <li><strong>Pages:</strong>
+                                        <ul>
+                                            <li>/dashboard - Visão geral</li>
+                                            <li>/agreements - Gestão de acordos</li>
+                                            <li>/profile - Perfil do usuário</li>
+                                            <li>/settings - Configurações</li>
+                                        </ul>
+                                    </li>
+                                    <li><strong>Components:</strong>
+                                        <ul>
+                                            <li>AgreementForm - Criação/edição</li>
+                                            <li>PaymentWidget - Processamento</li>
+                                            <li>Analytics - Gráficos e métricas</li>
+                                        </ul>
+                                    </li>
+                                    <li><strong>State Management:</strong>
+                                        <ul>
+                                            <li>userSlice - Dados do usuário</li>
+                                            <li>agreementSlice - Acordos</li>
+                                            <li>uiSlice - Estado da interface</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="resource-card">
+                                <h4><i class="fas fa-database"></i> Backend (Supabase)</h4>
+                                <ul>
+                                    <li><strong>Tabelas:</strong>
+                                        <ul>
+                                            <li>users - Perfis de usuário</li>
+                                            <li>agreements - Acordos financeiros</li>
+                                            <li>transactions - Histórico financeiro</li>
+                                            <li>notifications - Sistema de alertas</li>
+                                        </ul>
+                                    </li>
+                                    <li><strong>Políticas RLS:</strong>
+                                        <ul>
+                                            <li>Isolamento por usuário</li>
+                                            <li>Regras de negócio</li>
+                                            <li>Auditoria de mudanças</li>
+                                        </ul>
+                                    </li>
+                                    <li><strong>Edge Functions:</strong>
+                                        <ul>
+                                            <li>processPayment - Pagamentos</li>
+                                            <li>generateReport - Relatórios</li>
+                                            <li>notifyUser - Notificações</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Nova Aba de Design -->
+            <div class="tab-pane fade" id="design">
+                <div class="component-card">
+                    <h2><i class="fas fa-paint-brush"></i> Design System - SAAS Setor de Acordo</h2>
+                    
+                    <!-- Desktop Mockup -->
+                    <div class="mb-5">
+                        <h4>Dashboard Desktop</h4>
+                        <div class="mockup-container p-4 bg-white rounded-4 shadow">
+                            <div class="row">
+                                <!-- Sidebar -->
+                                <div class="col-2" style="background: #1a1f36;">
+                                    <div class="d-flex flex-column gap-4 p-4">
+                                        <div class="text-center mb-4">
+                                            <div class="logo-circle bg-primary text-white rounded-circle d-flex align-items-center justify-content-center mx-auto" style="width: 40px; height: 40px;">
+                                                <i class="fas fa-handshake"></i>
+                                            </div>
+                                            <div class="text-white mt-2">SAAS Acordo</div>
+                                        </div>
+                                        <div class="nav-item text-white">
+                                            <i class="fas fa-chart-line"></i>
+                                            <span class="ms-2">Overview</span>
+                                        </div>
+                                        <div class="nav-item text-white">
+                                            <i class="fas fa-users"></i>
+                                            <span class="ms-2">Clientes</span>
+                                        </div>
+                                        <div class="nav-item text-white">
+                                            <i class="fas fa-file-contract"></i>
+                                            <span class="ms-2">Carteira</span>
+                                        </div>
+                                        <div class="nav-item text-white">
+                                            <i class="fas fa-calendar"></i>
+                                            <span class="ms-2">Calendário</span>
+                                        </div>
+                                        <div class="nav-item text-white">
+                                            <i class="fas fa-cog"></i>
+                                            <span class="ms-2">Configurações</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Main Content -->
+                                <div class="col-10 bg-light">
+                                    <div class="row align-items-center mb-4 p-4">
+                                        <div class="col">
+                                            <div class="d-flex align-items-center">
+                                                <div class="me-3">
+                                                    <h5 class="mb-0">Projeção de Valores</h5>
+                                                    <small class="text-muted">Última atualização: 24/02/2025</small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-auto">
+                                            <div class="input-group">
+                                                <input type="text" class="form-control" placeholder="Pesquisar contato...">
+                                                <span class="input-group-text bg-primary text-white">
+                                                    <i class="fas fa-search"></i>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- KPIs -->
+                                    <div class="row mb-4 px-4">
+                                        <div class="col-md-3">
+                                            <div class="card h-100 border-0 shadow-sm">
+                                                <div class="card-body">
+                                                    <div class="d-flex justify-content-between align-items-center mb-3">
+                                                        <div class="text-muted">Valor da Carteira</div>
+                                                        <div class="icon-circle bg-primary bg-opacity-10">
+                                                            <i class="fas fa-dollar-sign text-primary"></i>
+                                                        </div>
+                                                    </div>
+                                                    <h3 class="mb-0">R$ 1.234.567</h3>
+                                                    <small class="text-success">+15% esse mês</small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <div class="card h-100 border-0 shadow-sm">
+                                                <div class="card-body">
+                                                    <div class="d-flex justify-content-between align-items-center mb-3">
+                                                        <div class="text-muted">Economia</div>
+                                                        <div class="icon-circle bg-success bg-opacity-10">
+                                                            <i class="fas fa-chart-pie text-success"></i>
+                                                        </div>
+                                                    </div>
+                                                    <h3 class="mb-0">45%</h3>
+                                                    <small class="text-success">Meta: 50%</small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <div class="card h-100 border-0 shadow-sm">
+                                                <div class="card-body">
+                                                    <div class="d-flex justify-content-between align-items-center mb-3">
+                                                        <div class="text-muted">Metas Diárias</div>
+                                                        <div class="icon-circle bg-info bg-opacity-10">
+                                                            <i class="fas fa-tasks text-info"></i>
+                                                        </div>
+                                                    </div>
+                                                    <h3 class="mb-0">8/10</h3>
+                                                    <small class="text-info">80% concluído</small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <div class="card h-100 border-0 shadow-sm">
+                                                <div class="card-body">
+                                                    <div class="d-flex justify-content-between align-items-center mb-3">
+                                                        <div class="text-muted">Ranking Geral</div>
+                                                        <div class="icon-circle bg-warning bg-opacity-10">
+                                                            <i class="fas fa-trophy text-warning"></i>
+                                                        </div>
+                                                    </div>
+                                                    <h3 class="mb-0">#1</h3>
+                                                    <small class="text-warning">Top Escritório</small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Gráficos & Métricas -->
+                                    <div class="row px-4">
+                                        <div class="col-md-8">
+                                            <div class="card border-0 shadow-sm mb-4">
+                                                <div class="card-body">
+                                                    <h5>Métricas de Desempenho</h5>
+                                                    <div class="chart-container" style="height: 300px;">
+                                                        <canvas id="metricsChart"></canvas>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="card border-0 shadow-sm mb-4">
+                                                <div class="card-body">
+                                                    <h5>Ranking por Diretor</h5>
+                                                    <div class="ranking-list">
+                                                        <div class="ranking-item d-flex align-items-center mb-3">
+                                                            <div class="ranking-number me-3">1</div>
+                                                            <div class="ranking-info flex-grow-1">
+                                                                <div>Toledo</div>
+                                                                <small class="text-muted">Código: 102</small>
+                                                            </div>
+                                                            <div class="ranking-value text-success">
+                                                                98%
+                                                            </div>
+                                                        </div>
+                                                        <!-- Mais itens de ranking aqui -->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Mobile Mockups -->
+                    <div class="mb-4">
+                        <h4>App Mobile</h4>
+                        <div class="row">
+                            <!-- Tela Principal -->
+                            <div class="col-md-4">
+                                <div class="mockup-container p-4 bg-white rounded-4 shadow" style="max-width: 375px; margin: 0 auto;">
+                                    <div class="d-flex justify-content-between align-items-center mb-4">
+                                        <div class="d-flex align-items-center">
+                                            <div class="logo-circle bg-primary text-white rounded-circle d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;">
+                                                <i class="fas fa-handshake"></i>
+                                            </div>
+                                            <h5 class="ms-2 mb-0">SAAS Acordo</h5>
+                                        </div>
+                                        <i class="fas fa-bell text-muted"></i>
+                                    </div>
+                                    
+                                    <div class="card border-0 shadow-sm bg-primary text-white mb-4">
+                                        <div class="card-body text-center p-4">
+                                            <h6 class="text-white-50">Valor da Carteira</h6>
+                                            <h2 class="mb-3">R$ 1.234.567</h2>
+                                            <div class="progress bg-white bg-opacity-25" style="height: 8px;">
+                                                <div class="progress-bar bg-white" style="width: 75%"></div>
+                                            </div>
+                                            <small class="text-white-50 mt-2 d-block">Meta Mensal: 75%</small>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="row text-center mb-4">
+                                        <div class="col-4">
+                                            <div class="action-button">
+                                                <div class="icon-circle bg-success bg-opacity-10 text-success rounded-circle p-3 mb-2 mx-auto">
+                                                    <i class="fas fa-users"></i>
+                                                </div>
+                                                <div>Clientes</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-4">
+                                            <div class="action-button">
+                                                <div class="icon-circle bg-info bg-opacity-10 text-info rounded-circle p-3 mb-2 mx-auto">
+                                                    <i class="fas fa-calculator"></i>
+                                                </div>
+                                                <div>Calculadora</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-4">
+                                            <div class="action-button">
+                                                <div class="icon-circle bg-warning bg-opacity-10 text-warning rounded-circle p-3 mb-2 mx-auto">
+                                                    <i class="fas fa-chart-bar"></i>
+                                                </div>
+                                                <div>Relatórios</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <h6 class="mb-3">Últimas Atividades</h6>
+                                    <div class="activity-item d-flex align-items-center mb-3 p-3 bg-light rounded">
+                                        <div class="icon-circle bg-success bg-opacity-10 text-success rounded-circle p-2 me-3">
+                                            <i class="fas fa-check"></i>
+                                        </div>
+                                        <div class="flex-grow-1">
+                                            <div class="fw-bold">Acordo Finalizado!</div>
+                                            <div class="text-muted small">Cliente: Toledo</div>
+                                        </div>
+                                        <div class="text-success">R$ 50.000</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Tela de Calculadora -->
+                            <div class="col-md-4">
+                                <div class="mockup-container p-4 bg-white rounded-4 shadow" style="max-width: 375px; margin: 0 auto;">
+                                    <div class="text-center mb-4">
+                                        <h5>Calculadora de Acordo</h5>
+                                        <p class="text-muted small">Simule valores e condições</p>
+                                    </div>
+                                    
+                                    <div class="card border-0 shadow-sm mb-4">
+                                        <div class="card-body">
+                                            <div class="form-group mb-3">
+                                                <label class="text-muted mb-2">Valor Total</label>
+                                                <input type="text" class="form-control" value="R$ 100.000,00">
+                                            </div>
+                                            <div class="form-group mb-3">
+                                                <label class="text-muted mb-2">Desconto (%)</label>
+                                                <input type="text" class="form-control" value="45">
+                                            </div>
+                                            <div class="form-group mb-4">
+                                                <label class="text-muted mb-2">Parcelas</label>
+                                                <select class="form-control">
+                                                    <option>12x</option>
+                                                    <option>24x</option>
+                                                    <option>36x</option>
+                                                </select>
+                                            </div>
+                                            <button class="btn btn-primary w-100">Calcular</button>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="result-card bg-light p-3 rounded">
+                                        <div class="d-flex justify-content-between mb-2">
+                                            <div class="text-muted">Valor Final</div>
+                                            <div class="fw-bold">R$ 55.000,00</div>
+                                        </div>
+                                        <div class="d-flex justify-content-between mb-2">
+                                            <div class="text-muted">Economia</div>
+                                            <div class="text-success">R$ 45.000,00</div>
+                                        </div>
+                                        <div class="d-flex justify-content-between">
+                                            <div class="text-muted">Parcela</div>
+                                            <div class="fw-bold">R$ 4.583,33</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Tela de Feedback -->
+                            <div class="col-md-4">
+                                <div class="mockup-container p-4 bg-white rounded-4 shadow" style="max-width: 375px; margin: 0 auto;">
+                                    <div class="text-center mb-4">
+                                        <div class="icon-circle bg-success text-white rounded-circle p-4 mx-auto mb-3" style="width: 80px; height: 80px;">
+                                            <i class="fas fa-check fa-2x"></i>
+                                        </div>
+                                        <h4>Acordo Concluído!</h4>
+                                        <p class="text-muted">Proposta aceita pelo cliente</p>
+                                    </div>
+                                    
+                                    <div class="card border-0 shadow-sm mb-4">
+                                        <div class="card-body">
+                                            <div class="d-flex justify-content-between mb-2">
+                                                <div class="text-muted">Cliente</div>
+                                                <div class="fw-bold">Toledo (102)</div>
+                                            </div>
+                                            <div class="d-flex justify-content-between mb-2">
+                                                <div class="text-muted">Valor Original</div>
+                                                <div class="text-decoration-line-through">R$ 100.000,00</div>
+                                            </div>
+                                            <div class="d-flex justify-content-between">
+                                                <div class="text-muted">Valor Final</div>
+                                                <div class="text-success fw-bold">R$ 55.000,00</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="text-center">
+                                        <button class="btn btn-primary w-100 mb-2">Gerar Contrato</button>
+                                        <button class="btn btn-outline-primary w-100">Voltar ao Dashboard</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Nova Aba de API -->
+            <div class="tab-pane fade" id="api">
+                <div class="component-card">
+                    <h2><i class="fas fa-code"></i> Documentação da API</h2>
+                    
+                    <div class="mb-4">
+                        <h4>Endpoints Principais</h4>
+                        <div class="resource-card">
+                            <h5>Autenticação</h5>
+                            <pre class="code-example">
+POST /api/auth/login
+{
+    "email": "string",
+    "senha": "string"
+}
+
+Resposta:
+{
+    "token": "string",
+    "usuario": {
+        "id": "string",
+        "nome": "string",
+        "email": "string",
+        "perfil": "analista|auditor|admin"
+    }
+}</pre>
+                        </div>
+
+                        <div class="resource-card mt-3">
+                            <h5>Análise de Dados</h5>
+                            <pre class="code-example">
+GET /api/analise360/ranking
+Authorization: Bearer {token}
+
+Resposta:
+{
+    "ranking": [
+        {
+            "id": "string",
+            "casos_pendentes": "number",
+            "casos_processados": "number",
+            "taxa_eficiencia": "number",
+            "status": "string",
+            "data": "string"
+        }
+    ],
+    "kpis": {
+        "total_casos": "number",
+        "taxa_media": "number"
+    }
+}</pre>
+                        </div>
+
+                        <div class="resource-card mt-3">
+                            <h5>Auditoria</h5>
+                            <pre class="code-example">
+GET /api/auditoria/relatorio
+Authorization: Bearer {token}
+
+Resposta:
+{
+    "relatorio": {
+        "total_registros": "number",
+        "inconsistencias": "number",
+        "status_processamento": "string",
+        "ultima_atualizacao": "string"
+    }
+}</pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Nova Aba de Segurança -->
+            <div class="tab-pane fade" id="security">
+                <div class="component-card">
+                    <h2><i class="fas fa-shield-alt"></i> Diretrizes de Segurança</h2>
+                    
+                    <div class="row mb-4">
+                        <div class="col-md-6">
+                            <div class="resource-card">
+                                <h4>Autenticação e Autorização</h4>
+                                <ul class="list-unstyled">
+                                    <li><i class="fas fa-check text-success"></i> Tokens JWT com níveis de acesso</li>
+                                    <li><i class="fas fa-check text-success"></i> Controle de acesso por perfil</li>
+                                    <li><i class="fas fa-check text-success"></i> Limite de tentativas de login</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="resource-card">
+                                <h4>Segurança de Dados</h4>
+                                <ul class="list-unstyled">
+                                    <li><i class="fas fa-check text-success"></i> Criptografia de dados sensíveis</li>
+                                    <li><i class="fas fa-check text-success"></i> Backup automático de relatórios</li>
+                                    <li><i class="fas fa-check text-success"></i> Registro de alterações (audit trail)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="resource-card">
+                                <h4>Validação de Dados</h4>
+                                <ul class="list-unstyled">
+                                    <li><i class="fas fa-check text-success"></i> Validação de planilhas</li>
+                                    <li><i class="fas fa-check text-success"></i> Verificação de integridade</li>
+                                    <li><i class="fas fa-check text-success"></i> Proteção contra injeção de dados</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="resource-card">
+                                <h4>Monitoramento</h4>
+                                <ul class="list-unstyled">
+                                    <li><i class="fas fa-check text-success"></i> Logs de auditoria detalhados</li>
+                                    <li><i class="fas fa-check text-success"></i> Alertas de inconsistências</li>
+                                    <li><i class="fas fa-check text-success"></i> Monitoramento de performance</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Nova Aba de Fluxos -->
+            <div class="tab-pane fade" id="flows">
+                <div class="component-card">
+                    <h2><i class="fas fa-sitemap"></i> Fluxos do Sistema</h2>
+                    
+                    <div class="diagram-container">
+                        <h4>Fluxo de Análise de Dados</h4>
+                        <div class="mermaid">
+                            sequenceDiagram
+                                participant U as Usuário
+                                participant A as Análise360
+                                participant D as AuditorDados
+                                participant B as Banco de Dados
+                                U->>A: Solicita análise
+                                A->>A: Valida planilhas
+                                A->>D: Processa dados
+                                D->>B: Verifica consistência
+                                B-->>D: Retorna status
+                                D-->>A: Gera ranking
+                                A-->>U: Exibe relatório
+                        </div>
+                    </div>
+
+                    <div class="diagram-container mt-4">
+                        <h4>Fluxo de Auditoria</h4>
+                        <div class="mermaid">
+                            sequenceDiagram
+                                participant U as Usuário
+                                participant AD as AuditorDados
+                                participant P as Processador
+                                participant R as Relatórios
+                                U->>AD: Inicia auditoria
+                                AD->>P: Analisa planilhas
+                                P->>R: Gera relatório
+                                R-->>AD: Salva resultados
+                                AD-->>U: Exibe inconsistências
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        mermaid.initialize({
+            startOnLoad: true,
+            theme: 'default',
+            securityLevel: 'loose',
+            flowchart: {
+                useMaxWidth: true,
+                htmlLabels: true,
+                curve: 'basis'
+            },
+            sequence: {
+                useMaxWidth: true,
+                showSequenceNumbers: false
+            }
+        });
+    </script>
+</body>
+</html>

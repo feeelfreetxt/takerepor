@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Análise de Desempenho</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #34495e;
+            --accent-color: #3498db;
+            --success-color: #2ecc71;
+            --warning-color: #f1c40f;
+            --danger-color: #e74c3c;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f9fa;
+        }
+        
+        .navbar {
+            background-color: var(--primary-color);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .navbar-brand {
+            font-weight: bold;
+            color: white !important;
+        }
+        
+        .card {
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+            border: none;
+        }
+        
+        .card-header {
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 10px 10px 0 0 !important;
+            padding: 15px 20px;
+        }
+        
+        .btn-primary {
+            background-color: var(--accent-color);
+            border-color: var(--accent-color);
+        }
+        
+        .btn-primary:hover {
+            background-color: #2980b9;
+            border-color: #2980b9;
+        }
+        
+        .upload-area {
+            border: 2px dashed #ddd;
+            border-radius: 10px;
+            padding: 30px;
+            text-align: center;
+            background-color: #f8f9fa;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .upload-area:hover {
+            border-color: var(--accent-color);
+            background-color: #e9ecef;
+        }
+        
+        .upload-icon {
+            font-size: 48px;
+            color: var(--accent-color);
+            margin-bottom: 15px;
+        }
+        
+        .status-card {
+            background-color: white;
+            border-left: 4px solid var(--accent-color);
+        }
+        
+        .progress-container {
+            margin: 20px 0;
+        }
+        
+        .result-link {
+            display: block;
+            padding: 10px;
+            margin: 5px 0;
+            background-color: #f8f9fa;
+            border-radius: 5px;
+            text-decoration: none;
+            color: var(--primary-color);
+            transition: all 0.2s;
+        }
+        
+        .result-link:hover {
+            background-color: #e9ecef;
+            transform: translateX(5px);
+        }
+        
+        .result-icon {
+            margin-right: 10px;
+            color: var(--accent-color);
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <i class="fas fa-chart-line me-2"></i>
+                Sistema de Análise de Desempenho
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#"><i class="fas fa-home me-1"></i> Início</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/dashboard"><i class="fas fa-tachometer-alt me-1"></i> Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fas fa-history me-1"></i> Histórico</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="mb-0"><i class="fas fa-upload me-2"></i> Upload de Arquivos</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="mb-4">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="grupo" id="grupo-julio" value="julio" checked>
+                                <label class="form-check-label" for="grupo-julio">Grupo Julio</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="grupo" id="grupo-leandro" value="leandro">
+                                <label class="form-check-label" for="grupo-leandro">Grupo Leandro</label>
+                            </div>
+                        </div>
+                        
+                        <div class="upload-area" id="upload-area">
+                            <i class="fas fa-file-excel upload-icon"></i>
+                            <h4>Arraste e solte arquivos Excel aqui</h4>
+                            <p class="text-muted">ou clique para selecionar</p>
+                            <input type="file" id="file-input" class="d-none" accept=".xlsx, .xls">
+                        </div>
+                        
+                        <div class="progress-container d-none" id="progress-container">
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 0%"></div>
+                            </div>
+                            <small class="text-muted mt-1 d-block" id="progress-text">Preparando upload...</small>
+                        </div>
+                        
+                        <div class="alert alert-success d-none" id="success-alert">
+                            <i class="fas fa-check-circle me-2"></i>
+                            <span id="success-message">Arquivo processado com sucesso!</span>
+                        </div>
+                        
+                        <div class="alert alert-danger d-none" id="error-alert">
+                            <i class="fas fa-exclamation-circle me-2"></i>
+                            <span id="error-message">Erro ao processar arquivo.</span>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <button class="btn btn-primary" id="analise-avancada-btn" disabled>
+                            <i class="fas fa-chart-pie me-2"></i>
+                            Executar Análise Avançada
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="card mb-4">
+                    <div class="card-header">
+                        <h5 class="mb-0">Arquivos Disponíveis</h5>
+                    </div>
+                    <div class="card-body">
+                        <p>Selecione um arquivo existente para análise:</p>
+                        
+                        <form id="form-arquivo-existente" class="mb-3">
+                            <div class="row g-3 align-items-center">
+                                <div class="col-md-6">
+                                    <select id="arquivo-existente" class="form-select" required>
+                                        <option value="">Selecione um arquivo...</option>
+                                        {% for arquivo in arquivos_disponiveis %}
+                                        <option value="{{ arquivo }}">{{ arquivo }}</option>
+                                        {% endfor %}
+                                    </select>
+                                </div>
+                                <div class="col-md-3">
+                                    <select id="grupo-existente" class="form-select">
+                                        <option value="default">Padrão</option>
+                                        <option value="julio">Julio</option>
+                                        <option value="leandro">Leandro</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-3">
+                                    <button type="submit" class="btn btn-primary w-100">
+                                        <i class="fas fa-chart-line me-2"></i> Analisar
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                        
+                        <div class="alert alert-info">
+                            <i class="fas fa-info-circle me-2"></i>
+                            Você também pode salvar arquivos Excel diretamente na pasta <code>data</code> do projeto.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="mb-0"><i class="fas fa-info-circle me-2"></i> Status da Análise</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="status-card p-3">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <h6>Arquivos Analisados</h6>
+                                    <p class="h3" id="arquivos-count">0</p>
+                                </div>
+                                <div class="col-md-4">
+                                    <h6>Colaboradores</h6>
+                                    <p class="h3" id="colaboradores-count">0</p>
+                                </div>
+                                <div class="col-md-4">
+                                    <h6>Última Análise</h6>
+                                    <p class="h6" id="ultima-analise">-</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="mb-0"><i class="fas fa-file-alt me-2"></i> Resultados Recentes</h5>
+                    </div>
+                    <div class="card-body">
+                        <div id="resultados-container">
+                            <p class="text-muted text-center">Nenhum resultado disponível</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="mb-0"><i class="fas fa-lightbulb me-2"></i> Dicas</h5>
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-unstyled">
+                            <li class="mb-3">
+                                <i class="fas fa-check-circle text-success me-2"></i>
+                                Certifique-se de que os arquivos Excel estão no formato correto
+                            </li>
+                            <li class="mb-3">
+                                <i class="fas fa-check-circle text-success me-2"></i>
+                                Selecione o grupo correto antes de fazer upload
+                            </li>
+                            <li class="mb-3">
+                                <i class="fas fa-check-circle text-success me-2"></i>
+                                Execute a análise avançada após processar todos os arquivos
+                            </li>
+                            <li>
+                                <i class="fas fa-check-circle text-success me-2"></i>
+                                Verifique o dashboard para visualizar os resultados completos
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Elementos DOM
+            const uploadArea = document.getElementById('upload-area');
+            const fileInput = document.getElementById('file-input');
+            const progressContainer = document.getElementById('progress-container');
+            const progressBar = document.querySelector('.progress-bar');
+            const progressText = document.getElementById('progress-text');
+            const successAlert = document.getElementById('success-alert');
+            const successMessage = document.getElementById('success-message');
+            const errorAlert = document.getElementById('error-alert');
+            const errorMessage = document.getElementById('error-message');
+            const analiseAvancadaBtn = document.getElementById('analise-avancada-btn');
+            const arquivosCount = document.getElementById('arquivos-count');
+            const colaboradoresCount = document.getElementById('colaboradores-count');
+            const ultimaAnalise = document.getElementById('ultima-analise');
+            const resultadosContainer = document.getElementById('resultados-container');
+            
+            // Eventos de upload
+            uploadArea.addEventListener('click', () => fileInput.click());
+            
+            uploadArea.addEventListener('dragover', (e) => {
+                e.preventDefault();
+                uploadArea.classList.add('bg-light');
+            });
+            
+            uploadArea.addEventListener('dragleave', () => {
+                uploadArea.classList.remove('bg-light');
+            });
+            
+            uploadArea.addEventListener('drop', (e) => {
+                e.preventDefault();
+                uploadArea.classList.remove('bg-light');
+                
+                if (e.dataTransfer.files.length) {
+                    fileInput.files = e.dataTransfer.files;
+                    handleFileUpload();
+                }
+            });
+            
+            fileInput.addEventListener('change', handleFileUpload);
+            
+            // Função para upload de arquivo
+            function handleFileUpload() {
+                if (!fileInput.files.length) return;
+                
+                const file = fileInput.files[0];
+                const formData = new FormData();
+                formData.append('file', file);
+                
+                // Obter grupo selecionado
+                const grupoSelecionado = document.querySelector('input[name="grupo"]:checked').value;
+                formData.append('grupo', grupoSelecionado);
+                
+                // Resetar alertas
+                successAlert.classList.add('d-none');
+                errorAlert.classList.add('d-none');
+                
+                // Mostrar progresso
+                progressContainer.classList.remove('d-none');
+                progressBar.style.width = '0%';
+                progressText.textContent = 'Iniciando upload...';
+                
+                // Simular progresso
+                let progress = 0;
+                const progressInterval = setInterval(() => {
+                    progress += 5;
+                    if (progress > 90) clearInterval(progressInterval);
+                    progressBar.style.width = `${progress}%`;
+                    progressText.textContent = `Processando arquivo... ${progress}%`;
+                }, 200);
+                
+                // Enviar arquivo
+                fetch('/upload', {
+                    method: 'POST',
+                    body: formData
+                })
+                .then(response => response.json())
+                .then(data => {
+                    clearInterval(progressInterval);
+                    progressBar.style.width = '100%';
+                    progressText.textContent = 'Processamento concluído!';
+                    
+                    if (data.status === 'success') {
+                        successAlert.classList.remove('d-none');
+                        successMessage.textContent = `Arquivo processado com sucesso! ${data.colaboradores ? data.colaboradores.length : 0} colaboradores analisados.`;
+                        analiseAvancadaBtn.disabled = false;
+                        
+                        // Atualizar contadores
+                        atualizarContadores();
+                    } else {
+                        errorAlert.classList.remove('d-none');
+                        errorMessage.textContent = data.mensagem || 'Erro ao processar arquivo.';
+                    }
+                    
+                    setTimeout(() => {
+                        progressContainer.classList.add('d-none');
+                    }, 2000);
+                })
+                .catch(error => {
+                    clearInterval(progressInterval);
+                    progressContainer.classList.add('d-none');
+                    errorAlert.classList.remove('d-none');
+                    errorMessage.textContent = 'Erro na comunicação com o servidor.';
+                    console.error('Erro:', error);
+                });
+            }
+            
+            // Botão de análise avançada
+            analiseAvancadaBtn.addEventListener('click', () => {
+                // Resetar alertas
+                successAlert.classList.add('d-none');
+                errorAlert.classList.add('d-none');
+                
+                // Mostrar progresso
+                progressContainer.classList.remove('d-none');
+                progressBar.style.width = '0%';
+                progressText.textContent = 'Iniciando análise avançada...';
+                
+                // Simular progresso
+                let progress = 0;
+                const progressInterval = setInterval(() => {
+                    progress += 2;
+                    if (progress > 95) clearInterval(progressInterval);
+                    progressBar.style.width = `${progress}%`;
+                    progressText.textContent = `Executando análise avançada... ${progress}%`;
+                }, 100);
+                
+                // Executar análise avançada
+                fetch('/analise-avancada', {
+                    method: 'POST'
+                })
+                .then(response => response.json())
+                .then(data => {
+                    clearInterval(progressInterval);
+                    progressBar.style.width = '100%';
+                    progressText.textContent = 'Análise concluída!';
+                    
+                    if (data.status === 'success') {
+                        successAlert.classList.remove('d-none');
+                        successMessage.textContent = 'Análise avançada concluída com sucesso!';
+                        
+                        // Adicionar link para o dashboard
+                        const dashboardPath = data.dashboard_path.split('/').pop();
+                        adicionarResultado('Dashboard HTML', dashboardPath, 'fa-chart-bar');
+                    } else {
+                        errorAlert.classList.remove('d-none');
+                        errorMessage.textContent = data.mensagem || 'Erro ao executar análise avançada.';
+                    }
+                    
+                    setTimeout(() => {
+                        progressContainer.classList.add('d-none');
+                    }, 2000);
+                })
+                .catch(error => {
+                    clearInterval(progressInterval);
+                    progressContainer.classList.add('d-none');
+                    errorAlert.classList.remove('d-none');
+                    errorMessage.textContent = 'Erro na comunicação com o servidor.';
+                    console.error('Erro:', error);
+                });
+            });
+            
+            // Função para atualizar contadores
+            function atualizarContadores() {
+                fetch('/resultados/relatorio_analise.json')
+                .then(response => response.json())
+                .then(data => {
+                    // Atualizar contadores
+                    arquivosCount.textContent = data.arquivos_analisados ? data.arquivos_analisados.length : 0;
+                    
+                    let totalColaboradores = 0;
+                    for (const grupo in data.resultados) {
+                        totalColaboradores += Object.keys(data.resultados[grupo]).length;
+                    }
+                    colaboradoresCount.textContent = totalColaboradores;
+                    
+                    // Formatar data
+                    if (data.ultima_analise) {
+                        const dataAnalise = new Date(data.ultima_analise);
+                        ultimaAnalise.textContent = dataAnalise.toLocaleString();
+                    }
+                    
+                    // Atualizar resultados recentes
+                    atualizarResultadosRecentes();
+                })
+                .catch(error => {
+                    console.error('Erro ao carregar dados:', error);
+                });
+            }
+            
+            // Função para adicionar resultado
+            function adicionarResultado(nome, arquivo, icone = 'fa-file') {
+                // Verificar se container está vazio
+                if (resultadosContainer.querySelector('.text-muted')) {
+                    resultadosContainer.innerHTML = '';
+                }
+                
+                // Criar elemento de resultado
+                const resultadoElement = document.createElement('a');
+                resultadoElement.href = `/resultados/${arquivo}`;
+                resultadoElement.className = 'result-link';
+                resultadoElement.target = '_blank';
+                resultadoElement.innerHTML = `
+                    <i class="fas ${icone} result-icon"></i>
+                    <span>${nome}</span>
+                    <small class="text-muted d-block mt-1">
+                        ${new Date().toLocaleString()}
+                    </small>
+                `;
+                
+                // Adicionar ao container
+                resultadosContainer.prepend(resultadoElement);
+            }
+            
+            // Função para atualizar resultados recentes
+            function atualizarResultadosRecentes() {
+                fetch('/resultados/relatorio_analise.json')
+                .then(response => response.json())
+                .then(data => {
+                    if (data.arquivos_analisados && data.arquivos_analisados.length) {
+                        resultadosContainer.innerHTML = '';
+                        
+                        // Adicionar relatório JSON
+                        adicionarResultado('Relatório de Análise (JSON)', 'relatorio_analise.json', 'fa-file-code');
+                        
+                        // Buscar dashboards HTML
+                        fetch('/resultados')
+                        .then(response => response.json())
+                        .then(files => {
+                            const dashboards = files.filter(file => file.endsWith('.html'));
+                            dashboards.forEach(dashboard => {
+                                adicionarResultado(`Dashboard ${dashboard.split('_')[1].split('.')[0]}`, dashboard, 'fa-chart-bar');
+                            });
+                        })
+                        .catch(error => {
+                            console.error('Erro ao listar arquivos:', error);
+                        });
+                    }
+                })
+                .catch(error => {
+                    console.error('Erro ao carregar dados:', error);
+                });
+            }
+            
+            // Formulário de arquivo existente
+            document.getElementById('form-arquivo-existente').addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                const arquivo = document.getElementById('arquivo-existente').value;
+                const grupo = document.getElementById('grupo-existente').value;
+                
+                if (!arquivo) {
+                    alert('Selecione um arquivo para análise.');
+                    return;
+                }
+                
+                // Mostrar indicador de carregamento
+                document.getElementById('loading-indicator').style.display = 'flex';
+                
+                // Enviar solicitação
+                const formData = new FormData();
+                formData.append('arquivo', arquivo);
+                formData.append('grupo', grupo);
+                
+                fetch('/analisar-existente', {
+                    method: 'POST',
+                    body: formData
+                })
+                .then(response => response.json())
+                .then(data => {
+                    // Ocultar indicador de carregamento
+                    document.getElementById('loading-indicator').style.display = 'none';
+                    
+                    if (data.status === 'success') {
+                        // Atualizar contadores
+                        atualizarContadores();
+                        
+                        // Mostrar mensagem de sucesso
+                        alert(`Arquivo analisado com sucesso! ${data.colaboradores ? data.colaboradores.length : 0} colaboradores processados.`);
+                    } else {
+                        // Mostrar mensagem de erro
+                        alert(`Erro: ${data.mensagem}`);
+                    }
+                })
+                .catch(error => {
+                    // Ocultar indicador de carregamento
+                    document.getElementById('loading-indicator').style.display = 'none';
+                    
+                    // Mostrar mensagem de erro
+                    alert(`Erro ao processar solicitação: ${error.message}`);
+                });
+            });
+            
+            // Inicializar
+            atualizarContadores();
+        });
+    </script>
+</body>
+</html>

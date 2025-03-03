@@ -1,0 +1,158 @@
+
+        <!DOCTYPE html>
+        <html>
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Dashboard de Análise de Colaboradores</title>
+            
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 20px;
+                background-color: #f5f5f5;
+            }
+            .container {
+                max-width: 1200px;
+                margin: 0 auto;
+            }
+            .card {
+                background: white;
+                border-radius: 8px;
+                padding: 20px;
+                margin-bottom: 20px;
+                box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            }
+            .header {
+                background: #2c3e50;
+                color: white;
+                padding: 20px;
+                border-radius: 8px;
+                margin-bottom: 20px;
+            }
+            .metric {
+                display: inline-block;
+                padding: 10px;
+                margin: 5px;
+                background: #ecf0f1;
+                border-radius: 4px;
+                min-width: 150px;
+            }
+            .good { color: #27ae60; }
+            .warning { color: #f39c12; }
+            .bad { color: #c0392b; }
+            .chart-container {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 20px;
+                justify-content: space-between;
+            }
+            .chart {
+                flex: 1;
+                min-width: 300px;
+                max-width: 600px;
+            }
+            table {
+                width: 100%;
+                border-collapse: collapse;
+                margin: 20px 0;
+            }
+            th, td {
+                padding: 12px;
+                text-align: left;
+                border-bottom: 1px solid #ddd;
+            }
+            th {
+                background-color: #2c3e50;
+                color: white;
+            }
+            tr:nth-child(even) {
+                background-color: #f2f2f2;
+            }
+            .nav {
+                display: flex;
+                gap: 10px;
+                margin-bottom: 20px;
+            }
+            .nav-item {
+                padding: 10px 20px;
+                background: #2c3e50;
+                color: white;
+                border-radius: 4px;
+                cursor: pointer;
+                text-decoration: none;
+            }
+            .nav-item:hover {
+                background: #34495e;
+            }
+        </style>
+        
+        </head>
+        <body>
+            <div class="container">
+                <div class="header">
+                    <h1>Dashboard de Análise de Colaboradores</h1>
+                    <p>Atualizado em: 03/03/2025 05:00:05</p>
+                </div>
+                
+                <div class="nav">
+                    <a href="#resumo" class="nav-item">Resumo</a>
+                    <a href="#metricas" class="nav-item">Métricas</a>
+                    <a href="#detalhes" class="nav-item">Detalhes</a>
+                    <a href="#recomendacoes" class="nav-item">Recomendações</a>
+                </div>
+                
+                <div id="resumo" class="card">
+                    <h2>Resumo Geral</h2>
+                    
+        <div class="chart-container">
+            <div class="chart">
+                <h3>Distribuição de Scores</h3>
+                <!-- Adicionar gráfico de distribuição -->
+            </div>
+            <div class="chart">
+                <h3>Top Performers</h3>
+                <!-- Adicionar tabela de top performers -->
+            </div>
+        </div>
+        
+                </div>
+                
+                <div id="metricas" class="card">
+                    <h2>Métricas por Colaborador</h2>
+                    
+        <table>
+            <tr>
+                <th>Colaborador</th>
+                <th>Score</th>
+                <th>Taxa Preenchimento</th>
+                <th>Taxa Padronização</th>
+                <th>Consistência</th>
+            </tr>
+            <!-- Adicionar linhas da tabela -->
+        </table>
+        
+                </div>
+                
+                <div id="detalhes" class="card">
+                    <h2>Análise Detalhada</h2>
+                    
+        <div class="chart-container">
+            <!-- Adicionar gráficos detalhados -->
+        </div>
+        
+                </div>
+                
+                <div id="recomendacoes" class="card">
+                    <h2>Recomendações</h2>
+                    
+        <ul>
+            <!-- Adicionar recomendações -->
+        </ul>
+        
+                </div>
+            </div>
+        </body>
+        </html>
+        

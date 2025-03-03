@@ -1,0 +1,207 @@
+
+        <!DOCTYPE html>
+        <html lang="pt-BR">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Dashboard de Análise de Desempenho</title>
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+            <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+            <style>
+                body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f8f9fa; }
+                .card { border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); margin-bottom: 20px; }
+                .card-header { background-color: #2c3e50; color: white; border-radius: 10px 10px 0 0 !important; }
+                .stat-card { border-radius: 10px; padding: 20px; margin-bottom: 20px; background-color: white; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+                .stat-value { font-size: 24px; font-weight: bold; margin-bottom: 5px; }
+                .stat-label { color: #6c757d; font-size: 14px; }
+                .trend-up { color: #2ecc71; }
+                .trend-down { color: #e74c3c; }
+                .trend-stable { color: #f1c40f; }
+                .alert-card { border-left: 4px solid; }
+                .alert-critical { border-color: #e74c3c; }
+                .alert-warning { border-color: #f1c40f; }
+                .alert-info { border-color: #3498db; }
+            </style>
+        </head>
+        <body>
+            <div class="container-fluid py-4">
+                <h1 class="mb-4">Dashboard de Análise de Desempenho</h1>
+                <p class="text-muted">Última atualização: 01/03/2025 17:19:45</p>
+                
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="stat-card">
+                            <div class="stat-value">0</div>
+                            <div class="stat-label">Colaboradores Analisados</div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="stat-card">
+                            <div class="stat-value">0</div>
+                            <div class="stat-label">Total de Registros</div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="stat-card">
+                            <div class="stat-value">nan%</div>
+                            <div class="stat-label">Eficiência Média</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row mt-4">
+                    <div class="col-md-6">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="mb-0">Eficiência por Colaborador</h5>
+                            </div>
+                            <div class="card-body">
+                                <canvas id="eficienciaChart" height="300"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="mb-0">Volume de Registros</h5>
+                            </div>
+                            <div class="card-body">
+                                <canvas id="volumeChart" height="300"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row mt-4">
+                    <div class="col-md-6">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="mb-0">Tempo Médio de Resolução</h5>
+                            </div>
+                            <div class="card-body">
+                                <canvas id="tempoChart" height="300"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="mb-0">Gargalos Identificados</h5>
+                            </div>
+                            <div class="card-body">
+                                <div class="alert alert-danger" role="alert">
+                                    <h6>Tempo de Resolução Alto</h6>
+                                    <ul>
+                                        
+                                    </ul>
+                                </div>
+                                <div class="alert alert-warning" role="alert">
+                                    <h6>Eficiência Baixa</h6>
+                                    <ul>
+                                        
+                                    </ul>
+                                </div>
+                                <div class="alert alert-info" role="alert">
+                                    <h6>Volume Alto</h6>
+                                    <ul>
+                                        
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <script>
+                // Gráfico de Eficiência
+                const ctx1 = document.getElementById('eficienciaChart').getContext('2d');
+                const eficienciaChart = new Chart(ctx1, {
+                    type: 'bar',
+                    data: {
+                        labels: [],
+                        datasets: [{
+                            label: 'Eficiência (%)',
+                            data: [],
+                            backgroundColor: 'rgba(52, 152, 219, 0.7)',
+                            borderColor: 'rgba(52, 152, 219, 1)',
+                            borderWidth: 1
+                        }]
+                    },
+                    options: {
+                        indexAxis: 'y',
+                        plugins: {
+                            legend: {
+                                display: false
+                            }
+                        },
+                        scales: {
+                            x: {
+                                beginAtZero: true,
+                                max: 100
+                            }
+                        }
+                    }
+                });
+                
+                // Gráfico de Volume
+                const ctx2 = document.getElementById('volumeChart').getContext('2d');
+                const volumeChart = new Chart(ctx2, {
+                    type: 'bar',
+                    data: {
+                        labels: [],
+                        datasets: [{
+                            label: 'Volume de Registros',
+                            data: [],
+                            backgroundColor: 'rgba(46, 204, 113, 0.7)',
+                            borderColor: 'rgba(46, 204, 113, 1)',
+                            borderWidth: 1
+                        }]
+                    },
+                    options: {
+                        indexAxis: 'y',
+                        plugins: {
+                            legend: {
+                                display: false
+                            }
+                        },
+                        scales: {
+                            x: {
+                                beginAtZero: true
+                            }
+                        }
+                    }
+                });
+                
+                // Gráfico de Tempo
+                const ctx3 = document.getElementById('tempoChart').getContext('2d');
+                const tempoChart = new Chart(ctx3, {
+                    type: 'bar',
+                    data: {
+                        labels: [],
+                        datasets: [{
+                            label: 'Tempo Médio (dias)',
+                            data: [],
+                            backgroundColor: 'rgba(231, 76, 60, 0.7)',
+                            borderColor: 'rgba(231, 76, 60, 1)',
+                            borderWidth: 1
+                        }]
+                    },
+                    options: {
+                        indexAxis: 'y',
+                        plugins: {
+                            legend: {
+                                display: false
+                            }
+                        },
+                        scales: {
+                            x: {
+                                beginAtZero: true
+                            }
+                        }
+                    }
+                });
+            </script>
+        </body>
+        </html>
+        

@@ -1,0 +1,809 @@
+{
+  "TESTE": {
+    "total_registros": 11,
+    "taxa_sucesso": 0.0,
+    "tempo_medio": null,
+    "bancos": {},
+    "ultimas_negociacoes": []
+  },
+  "ANA LIDIA": {
+    "total_registros": 709,
+    "taxa_sucesso": 0.0,
+    "tempo_medio": 2.9,
+    "bancos": {
+      "PANAMERICANO": 208,
+      "BV FINANCEIRA": 147,
+      "AYMORÉ": 69
+    },
+    "ultimas_negociacoes": [
+      {
+        "data": "2025-02-18",
+        "status": "PRIORIDADE"
+      },
+      {
+        "data": "2025-02-17",
+        "status": "PENDENTE"
+      },
+      {
+        "data": "2025-02-17",
+        "status": "PENDENTE"
+      },
+      {
+        "data": "2025-02-17",
+        "status": "PENDENTE"
+      },
+      {
+        "data": "2025-02-17",
+        "status": "PENDENTE"
+      }
+    ]
+  },
+  "FELIPE": {
+    "total_registros": 709,
+    "taxa_sucesso": 0.0,
+    "tempo_medio": 0.83,
+    "bancos": {
+      "PANAMERICANO": 168,
+      "BV FINANCEIRA": 146,
+      "SANTANDER": 114
+    },
+    "ultimas_negociacoes": [
+      {
+        "data": "2025-02-18",
+        "status": "PRIORIDADE"
+      },
+      {
+        "data": "2025-02-18",
+        "status": "PRIORIDADE"
+      },
+      {
+        "data": "2025-02-18",
+        "status": "VERIFICADO"
+      },
+      {
+        "data": "2025-02-18",
+        "status": "PRIORIDADE"
+      },
+      {
+        "data": "2025-02-17",
+        "status": "CANCELADO"
+      }
+    ]
+  },
+  "JULIANE": {
+    "total_registros": 708,
+    "taxa_sucesso": 0.0,
+    "tempo_medio": 2.93,
+    "bancos": {
+      "PANAMERICANO": 177,
+      "BV FINANCEIRA": 135,
+      "BRADESCO": 85
+    },
+    "ultimas_negociacoes": [
+      {
+        "data": "2025-02-18",
+        "status": "ANÁLISE"
+      },
+      {
+        "data": "2025-02-18",
+        "status": "PRIORIDADE"
+      },
+      {
+        "data": "2025-02-17",
+        "status": "PENDENTE"
+      },
+      {
+        "data": "2025-02-17",
+        "status": "PENDENTE"
+      },
+      {
+        "data": "2025-02-17",
+        "status": "PENDENTE"
+      }
+    ]
+  },
+  "MATHEUS": {
+    "total_registros": 709,
+    "taxa_sucesso": 0.0,
+    "tempo_medio": 5.0,
+    "bancos": {
+      "PANAMERICANO": 188,
+      "BV FINANCEIRA": 144,
+      "BRADESCO": 89
+    },
+    "ultimas_negociacoes": [
+      {
+        "data": "2025-02-18",
+        "status": "PRIORIDADE"
+      },
+      {
+        "data": "2025-02-18",
+        "status": "PRIORIDADE"
+      },
+      {
+        "data": "2025-02-17",
+        "status": "PENDENTE"
+      },
+      {
+        "data": "2025-02-17",
+        "status": "PENDENTE"
+      },
+      {
+        "data": "2025-02-17",
+        "status": "PENDENTE"
+      }
+    ]
+  },
+  "ANA GESSICA": {
+    "total_registros": 708,
+    "taxa_sucesso": 0.0,
+    "tempo_medio": 1.72,
+    "bancos": {
+      "PANAMERICANO": 210,
+      "BV FINANCEIRA": 149,
+      "BRADESCO": 75
+    },
+    "ultimas_negociacoes": [
+      {
+        "data": "2025-02-18",
+        "status": "PRIORIDADE"
+      },
+      {
+        "data": "2025-02-18",
+        "status": "PRIORIDADE"
+      },
+      {
+        "data": "2025-02-18",
+        "status": "VERIFICADO"
+      },
+      {
+        "data": "2025-02-17",
+        "status": "PENDENTE"
+      },
+      {
+        "data": "2025-02-17",
+        "status": "PENDENTE"
+      }
+    ]
+  },
+  "POLIANA": {
+    "total_registros": 709,
+    "taxa_sucesso": 0.0,
+    "tempo_medio": 4.72,
+    "bancos": {
+      "PANAMERICANO": 177,
+      "BV FINANCEIRA": 138,
+      "SANTANDER": 118
+    },
+    "ultimas_negociacoes": [
+      {
+        "data": "2025-02-18",
+        "status": "PRIORIDADE"
+      },
+      {
+        "data": "2025-02-18",
+        "status": "PRIORIDADE"
+      },
+      {
+        "data": "2025-02-18",
+        "status": "APROVADO"
+      },
+      {
+        "data": "2025-02-17",
+        "status": "PENDENTE"
+      },
+      {
+        "data": "2025-02-17",
+        "status": "PENDENTE"
+      }
+    ]
+  },
+  "IGOR": {
+    "total_registros": 709,
+    "taxa_sucesso": 0.0,
+    "tempo_medio": -3.45,
+    "bancos": {
+      "PANAMERICANO": 160,
+      "BV FINANCEIRA": 138,
+      "BRADESCO": 95
+    },
+    "ultimas_negociacoes": [
+      {
+        "data": "2025-02-18",
+        "status": "PENDENTE"
+      },
+      {
+        "data": "2025-02-18",
+        "status": "PRIORIDADE"
+      },
+      {
+        "data": "2025-02-17",
+        "status": "PENDENTE"
+      },
+      {
+        "data": "2025-02-17",
+        "status": "PENDENTE"
+      },
+      {
+        "data": "2025-02-17",
+        "status": "PENDENTE"
+      }
+    ]
+  },
+  "LUARA": {
+    "total_registros": 714,
+    "taxa_sucesso": 0.0,
+    "tempo_medio": 2.21,
+    "bancos": {
+      "PANAMERICANO": 190,
+      "BV FINANCEIRA": 152,
+      "BRADESCO": 102
+    },
+    "ultimas_negociacoes": [
+      {
+        "data": "2025-02-18",
+        "status": "PRIORIDADE"
+      },
+      {
+        "data": "2025-02-17",
+        "status": "PENDENTE"
+      },
+      {
+        "data": "2025-02-17",
+        "status": "PENDENTE"
+      },
+      {
+        "data": "2025-02-17",
+        "status": "PENDENTE"
+      },
+      {
+        "data": "2025-02-17",
+        "status": "PENDENTE"
+      }
+    ]
+  },
+  "ELISANGELA": {
+    "total_registros": 709,
+    "taxa_sucesso": 0.0,
+    "tempo_medio": -33.7,
+    "bancos": {
+      "PANAMERICANO": 172,
+      "BV FINANCEIRA": 139,
+      "BRADESCO": 82
+    },
+    "ultimas_negociacoes": [
+      {
+        "data": "2025-02-18",
+        "status": "PRIORIDADE"
+      },
+      {
+        "data": "2025-02-17",
+        "status": "VERIFICADO"
+      },
+      {
+        "data": "2025-02-17",
+        "status": "PENDENTE"
+      },
+      {
+        "data": "2025-02-17",
+        "status": "PENDENTE"
+      },
+      {
+        "data": "2025-02-17",
+        "status": "PENDENTE"
+      }
+    ]
+  },
+  "NUNO": {
+    "total_registros": 708,
+    "taxa_sucesso": 0.0,
+    "tempo_medio": 1.32,
+    "bancos": {
+      "PANAMERICANO": 195,
+      "BV FINANCEIRA": 143,
+      "SANTANDER": 135
+    },
+    "ultimas_negociacoes": [
+      {
+        "data": "2025-02-18",
+        "status": "ANÁLISE"
+      },
+      {
+        "data": "2025-02-18",
+        "status": "PRIORIDADE"
+      },
+      {
+        "data": "2025-02-18",
+        "status": "VERIFICADO"
+      },
+      {
+        "data": "2025-02-18",
+        "status": "PRIORIDADE"
+      },
+      {
+        "data": "2025-02-17",
+        "status": "PENDENTE"
+      }
+    ]
+  },
+  "VICTOR ADRIANO": {
+    "total_registros": 557,
+    "taxa_sucesso": 0.0,
+    "tempo_medio": 1.25,
+    "bancos": {
+      "PANAMERICANO": 120,
+      "BV FINANCEIRA": 103,
+      "AYMORÉ": 64
+    },
+    "ultimas_negociacoes": [
+      {
+        "data": "2025-02-18",
+        "status": "PRIORIDADE"
+      },
+      {
+        "data": "2025-02-18",
+        "status": "PRIORIDADE"
+      },
+      {
+        "data": "2025-02-18",
+        "status": "PRIORIDADE"
+      },
+      {
+        "data": "2025-02-18",
+        "status": "PRIORIDADE"
+      },
+      {
+        "data": "2025-02-18",
+        "status": "PRIORIDADE"
+      }
+    ]
+  },
+  "AMANDA SANTANA": {
+    "total_registros": 703,
+    "taxa_sucesso": 0.0,
+    "tempo_medio": 2.46,
+    "bancos": {
+      "PANAMERICANO": 165,
+      "BV FINANCEIRA": 111,
+      "BRADESCO": 85
+    },
+    "ultimas_negociacoes": [
+      {
+        "data": "2025-02-18",
+        "status": "PRIORIDADE"
+      },
+      {
+        "data": "2025-02-18",
+        "status": "PRIORIDADE"
+      },
+      {
+        "data": "2025-02-18",
+        "status": "PENDENTE"
+      },
+      {
+        "data": "2025-02-17",
+        "status": "ANÁLISE"
+      },
+      {
+        "data": "2025-02-17",
+        "status": "PENDENTE"
+      }
+    ]
+  },
+  "ALINE SALVADOR": {
+    "total_registros": 703,
+    "taxa_sucesso": 0.0,
+    "tempo_medio": 0.95,
+    "bancos": {
+      "BV FINANCEIRA": 143,
+      "PANAMERICANO": 142,
+      "BRADESCO": 82
+    },
+    "ultimas_negociacoes": [
+      {
+        "data": "2025-02-18",
+        "status": "PRIORIDADE"
+      },
+      {
+        "data": "2025-02-18",
+        "status": "ANÁLISE"
+      },
+      {
+        "data": "2025-02-17",
+        "status": "PENDENTE"
+      },
+      {
+        "data": "2025-02-17",
+        "status": "PENDENTE"
+      },
+      {
+        "data": "2025-02-17",
+        "status": "PENDENTE"
+      }
+    ]
+  },
+  "BRUNO ": {
+    "total_registros": 703,
+    "taxa_sucesso": 0.0,
+    "tempo_medio": -12.0,
+    "bancos": {
+      "PANAMERICANO": 158,
+      "BV FINANCEIRA": 114,
+      "BRADESCO": 108
+    },
+    "ultimas_negociacoes": [
+      {
+        "data": "2025-02-18",
+        "status": "VERIFICADO"
+      },
+      {
+        "data": "2025-02-18",
+        "status": "ANÁLISE"
+      },
+      {
+        "data": "2025-02-17",
+        "status": "PENDENTE"
+      },
+      {
+        "data": "2025-02-17",
+        "status": "PENDENTE"
+      },
+      {
+        "data": "2025-02-17",
+        "status": "PENDENTE"
+      }
+    ]
+  },
+  "EDIANE": {
+    "total_registros": 703,
+    "taxa_sucesso": 0.0,
+    "tempo_medio": 2.44,
+    "bancos": {
+      "PANAMERICANO": 153,
+      "BV FINANCEIRA": 106,
+      "BRADESCO": 97
+    },
+    "ultimas_negociacoes": [
+      {
+        "data": "2025-02-25",
+        "status": "PRIORIDADE"
+      },
+      {
+        "data": "2025-02-18",
+        "status": "VERIFICADO"
+      },
+      {
+        "data": "2025-02-18",
+        "status": "PRIORIDADE"
+      },
+      {
+        "data": "2025-02-18",
+        "status": "PRIORIDADE"
+      },
+      {
+        "data": "2025-02-18",
+        "status": "VERIFICADO"
+      }
+    ]
+  },
+  "FABIANA": {
+    "total_registros": 703,
+    "taxa_sucesso": 0.0,
+    "tempo_medio": -11.37,
+    "bancos": {
+      "PANAMERICANO": 149,
+      "BV FINANCEIRA": 136,
+      "SANTANDER": 104
+    },
+    "ultimas_negociacoes": [
+      {
+        "data": "2025-02-17",
+        "status": "PENDENTE"
+      },
+      {
+        "data": "2025-02-17",
+        "status": "PENDENTE"
+      },
+      {
+        "data": "2025-02-17",
+        "status": "PENDENTE"
+      },
+      {
+        "data": "2025-02-17",
+        "status": "PENDENTE"
+      },
+      {
+        "data": "2025-02-17",
+        "status": "PENDENTE"
+      }
+    ]
+  },
+  "ITAYNNARA": {
+    "total_registros": 708,
+    "taxa_sucesso": 0.0,
+    "tempo_medio": 3.46,
+    "bancos": {
+      "PANAMERICANO": 165,
+      "BV FINANCEIRA": 122,
+      "SANTANDER": 77
+    },
+    "ultimas_negociacoes": [
+      {
+        "data": "2025-02-18",
+        "status": "ANÁLISE"
+      },
+      {
+        "data": "2025-02-18",
+        "status": "PRIORIDADE"
+      },
+      {
+        "data": "2025-02-17",
+        "status": "PENDENTE"
+      },
+      {
+        "data": "2025-02-17",
+        "status": "PENDENTE"
+      },
+      {
+        "data": "2025-02-17",
+        "status": "PENDENTE"
+      }
+    ]
+  },
+  "MARIA BRUNA": {
+    "total_registros": 707,
+    "taxa_sucesso": 0.0,
+    "tempo_medio": 4.15,
+    "bancos": {
+      "PANAMERICANO": 171,
+      "BV FINANCEIRA": 108,
+      "BRADESCO": 67
+    },
+    "ultimas_negociacoes": [
+      {
+        "data": "2025-02-18",
+        "status": "APROVADO"
+      },
+      {
+        "data": "2025-02-18",
+        "status": "PRIORIDADE"
+      },
+      {
+        "data": "2025-02-18",
+        "status": "APROVADO"
+      },
+      {
+        "data": "2025-02-18",
+        "status": "PENDENTE"
+      },
+      {
+        "data": "2025-02-18",
+        "status": "APROVADO"
+      }
+    ]
+  },
+  "MONYZA": {
+    "total_registros": 707,
+    "taxa_sucesso": 0.0,
+    "tempo_medio": 4.03,
+    "bancos": {
+      "PANAMERICANO": 157,
+      "BV FINANCEIRA": 125,
+      "SANTANDER": 108
+    },
+    "ultimas_negociacoes": [
+      {
+        "data": "2025-02-18",
+        "status": "PRIORIDADE"
+      },
+      {
+        "data": "2025-02-18",
+        "status": "VERIFICADO"
+      },
+      {
+        "data": "2025-02-18",
+        "status": "PRIORIDADE TOTAL"
+      },
+      {
+        "data": "2025-02-18",
+        "status": "PRIORIDADE"
+      },
+      {
+        "data": "2025-02-18",
+        "status": "VERIFICADO"
+      }
+    ]
+  },
+  "JULIA": {
+    "total_registros": 707,
+    "taxa_sucesso": 0.0,
+    "tempo_medio": 1.38,
+    "bancos": {
+      "PANAMERICANO": 141,
+      "BV FINANCEIRA": 99,
+      "BRADESCO": 95
+    },
+    "ultimas_negociacoes": [
+      {
+        "data": "2025-02-18",
+        "status": "PRIORIDADE"
+      },
+      {
+        "data": "2025-02-18",
+        "status": "PRIORIDADE"
+      },
+      {
+        "data": "2025-02-18",
+        "status": "PRIORIDADE"
+      },
+      {
+        "data": "2025-02-17",
+        "status": "PENDENTE"
+      },
+      {
+        "data": "2025-02-17",
+        "status": "PENDENTE"
+      }
+    ]
+  },
+  "IZABEL": {
+    "total_registros": 708,
+    "taxa_sucesso": 0.0,
+    "tempo_medio": 2.88,
+    "bancos": {
+      "PANAMERICANO": 160,
+      "BV FINANCEIRA": 132,
+      "BRADESCO": 83
+    },
+    "ultimas_negociacoes": [
+      {
+        "data": "2025-02-18",
+        "status": "VERIFICADO"
+      },
+      {
+        "data": "2025-02-18",
+        "status": "PENDENTE"
+      },
+      {
+        "data": "2025-02-18",
+        "status": "PRIORIDADE"
+      },
+      {
+        "data": "2025-02-18",
+        "status": "PRIORIDADE"
+      },
+      {
+        "data": "2025-02-18",
+        "status": "QUITADO"
+      }
+    ]
+  },
+  "JULIANA": {
+    "total_registros": 703,
+    "taxa_sucesso": 0.0,
+    "tempo_medio": 3.87,
+    "bancos": {
+      "PANAMERICANO": 160,
+      "BV FINANCEIRA": 116,
+      "BRADESCO": 81
+    },
+    "ultimas_negociacoes": [
+      {
+        "data": "2025-02-18",
+        "status": "PRIORIDADE"
+      },
+      {
+        "data": "2025-02-18",
+        "status": "VERIFICADO"
+      },
+      {
+        "data": "2025-02-17",
+        "status": "PENDENTE"
+      },
+      {
+        "data": "2025-02-17",
+        "status": "PENDENTE"
+      },
+      {
+        "data": "2025-02-17",
+        "status": "PENDENTE"
+      }
+    ]
+  },
+  "VITORIA": {
+    "total_registros": 707,
+    "taxa_sucesso": 0.0,
+    "tempo_medio": 3.0,
+    "bancos": {
+      "PANAMERICANO": 156,
+      "BV FINANCEIRA": 107,
+      "SANTANDER": 81
+    },
+    "ultimas_negociacoes": [
+      {
+        "data": "2025-02-18",
+        "status": "PRIORIDADE TOTAL"
+      },
+      {
+        "data": "2025-02-18",
+        "status": "PRIORIDADE"
+      },
+      {
+        "data": "2025-02-18",
+        "status": "PRIORIDADE"
+      },
+      {
+        "data": "2025-02-18",
+        "status": "PRIORIDADE"
+      },
+      {
+        "data": "2025-02-17",
+        "status": "PENDENTE"
+      }
+    ]
+  },
+  "KATIA": {
+    "total_registros": 707,
+    "taxa_sucesso": 0.0,
+    "tempo_medio": -30.09,
+    "bancos": {
+      "PANAMERICANO": 169,
+      "BV FINANCEIRA": 107,
+      "BRADESCO": 77
+    },
+    "ultimas_negociacoes": [
+      {
+        "data": "2025-02-18",
+        "status": "VERIFICADO"
+      },
+      {
+        "data": "2025-02-18",
+        "status": "APROVADO"
+      },
+      {
+        "data": "2025-02-18",
+        "status": "PRIORIDADE"
+      },
+      {
+        "data": "2025-02-17",
+        "status": "PENDENTE"
+      },
+      {
+        "data": "2025-02-17",
+        "status": "PENDENTE"
+      }
+    ]
+  },
+  "GREICY": {
+    "total_registros": 707,
+    "taxa_sucesso": 0.0,
+    "tempo_medio": 4.31,
+    "bancos": {
+      "PANAMERICANO": 174,
+      "BV FINANCEIRA": 115,
+      "SANTANDER": 112
+    },
+    "ultimas_negociacoes": [
+      {
+        "data": "2025-02-18",
+        "status": "APROVADO"
+      },
+      {
+        "data": "2025-02-17",
+        "status": "QUITADO"
+      },
+      {
+        "data": "2025-02-17",
+        "status": "PENDENTE"
+      },
+      {
+        "data": "2025-02-17",
+        "status": "PENDENTE"
+      },
+      {
+        "data": "2025-02-17",
+        "status": "PENDENTE"
+      }
+    ]
+  }
+}

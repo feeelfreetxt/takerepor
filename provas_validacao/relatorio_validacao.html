@@ -1,0 +1,358 @@
+
+    <!DOCTYPE html>
+    <html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Relatório de Validação de Métricas</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                line-height: 1.6;
+                color: #333;
+                max-width: 1200px;
+                margin: 0 auto;
+                padding: 20px;
+            }
+            .header {
+                text-align: center;
+                margin-bottom: 30px;
+                border-bottom: 2px solid #1976D2;
+                padding-bottom: 10px;
+            }
+            .header h1 {
+                color: #1976D2;
+                margin-bottom: 5px;
+            }
+            table {
+                width: 100%;
+                border-collapse: collapse;
+                margin-bottom: 20px;
+            }
+            th, td {
+                padding: 10px;
+                border: 1px solid #ddd;
+                text-align: left;
+            }
+            th {
+                background-color: #f2f2f2;
+                font-weight: bold;
+            }
+            tr:nth-child(even) {
+                background-color: #f9f9f9;
+            }
+            .good {
+                color: #4CAF50;
+                font-weight: bold;
+            }
+            .bad {
+                color: #F44336;
+                font-weight: bold;
+            }
+            .section {
+                margin-bottom: 30px;
+            }
+            .chart-container {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                margin-top: 20px;
+            }
+            .chart {
+                width: 48%;
+                margin-bottom: 20px;
+                border: 1px solid #ddd;
+                padding: 10px;
+                box-sizing: border-box;
+            }
+            .chart img {
+                width: 100%;
+                height: auto;
+            }
+            @media (max-width: 768px) {
+                .chart {
+                    width: 100%;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Relatório de Validação de Métricas</h1>
+            <p>Validação das métricas de qualidade dos colaboradores</p>
+        </div>
+        
+        <div class="section">
+            <h2>Top 5 Colaboradores (Melhor Qualidade)</h2>
+            <table>
+                <tr>
+                    <th>Colaborador</th>
+                    <th>Grupo</th>
+                    <th>Total Registros</th>
+                    <th>Registros Vazios</th>
+                    <th>Taxa Preenchimento</th>
+                    <th>Taxa Padronização</th>
+                    <th>Consistência Diária</th>
+                    <th>Score Qualidade</th>
+                </tr>
+    
+                <tr>
+                    <td>VITORIA</td>
+                    <td>LEANDRO</td>
+                    <td>89</td>
+                    <td>0</td>
+                    <td>100.0%</td>
+                    <td>83.3%</td>
+                    <td>0.0%</td>
+                    <td class="good">65.0</td>
+                </tr>
+            
+                <tr>
+                    <td>VICTOR ADRIANO</td>
+                    <td>JULIO</td>
+                    <td>556</td>
+                    <td>1</td>
+                    <td>99.8%</td>
+                    <td>71.4%</td>
+                    <td>0.0%</td>
+                    <td class="good">61.4</td>
+                </tr>
+            
+                <tr>
+                    <td>ELISANGELA</td>
+                    <td>JULIO</td>
+                    <td>648</td>
+                    <td>0</td>
+                    <td>100.0%</td>
+                    <td>62.5%</td>
+                    <td>0.0%</td>
+                    <td class="good">58.8</td>
+                </tr>
+            
+                <tr>
+                    <td>IGOR</td>
+                    <td>JULIO</td>
+                    <td>648</td>
+                    <td>0</td>
+                    <td>100.0%</td>
+                    <td>62.5%</td>
+                    <td>0.0%</td>
+                    <td class="good">58.8</td>
+                </tr>
+            
+            </table>
+        </div>
+        
+        <div class="section">
+            <h2>Colaboradores que Precisam de Atenção (Pior Qualidade)</h2>
+            <table>
+                <tr>
+                    <th>Colaborador</th>
+                    <th>Grupo</th>
+                    <th>Total Registros</th>
+                    <th>Registros Vazios</th>
+                    <th>Taxa Preenchimento</th>
+                    <th>Taxa Padronização</th>
+                    <th>Consistência Diária</th>
+                    <th>Score Qualidade</th>
+                </tr>
+    
+                <tr>
+                    <td>NUNO</td>
+                    <td>JULIO</td>
+                    <td>701</td>
+                    <td>0</td>
+                    <td>100.0%</td>
+                    <td>50.0%</td>
+                    <td>0.0%</td>
+                    <td class="bad">55.0</td>
+                </tr>
+            
+                <tr>
+                    <td>AMANDA SANTANA</td>
+                    <td>LEANDRO</td>
+                    <td>703</td>
+                    <td>47</td>
+                    <td>93.3%</td>
+                    <td>55.6%</td>
+                    <td>0.0%</td>
+                    <td class="bad">54.0</td>
+                </tr>
+            
+                <tr>
+                    <td>JULIA</td>
+                    <td>LEANDRO</td>
+                    <td>707</td>
+                    <td>56</td>
+                    <td>92.1%</td>
+                    <td>55.6%</td>
+                    <td>0.0%</td>
+                    <td class="bad">53.5</td>
+                </tr>
+            
+                <tr>
+                    <td>KATIA</td>
+                    <td>LEANDRO</td>
+                    <td>707</td>
+                    <td>56</td>
+                    <td>92.1%</td>
+                    <td>55.6%</td>
+                    <td>0.0%</td>
+                    <td class="bad">53.5</td>
+                </tr>
+            
+                <tr>
+                    <td>ALINE SALVADOR</td>
+                    <td>LEANDRO</td>
+                    <td>704</td>
+                    <td>54</td>
+                    <td>92.3%</td>
+                    <td>50.0%</td>
+                    <td>0.0%</td>
+                    <td class="bad">51.9</td>
+                </tr>
+            
+            </table>
+        </div>
+        
+        <div class="section">
+            <h2>Detalhamento dos Problemas</h2>
+            <table>
+                <tr>
+                    <th>Colaborador</th>
+                    <th>Valores Não Padronizados</th>
+                    <th>Impacto no Score</th>
+                </tr>
+    
+                <tr>
+                    <td>VITORIA</td>
+                    <td>PRIORIDADE</td>
+                    <td>-5.0 pontos</td>
+                </tr>
+            
+                <tr>
+                    <td>VICTOR ADRIANO</td>
+                    <td>PRIORIDADE, ANÁLISE</td>
+                    <td>-8.6 pontos</td>
+                </tr>
+            
+                <tr>
+                    <td>ELISANGELA</td>
+                    <td>APREENDIDO, OUTROS ACORDOS, ANÁLISE</td>
+                    <td>-11.2 pontos</td>
+                </tr>
+            
+                <tr>
+                    <td>IGOR</td>
+                    <td>PRIORIDADE, ANÁLISE, PRIORIDADE TOTAL</td>
+                    <td>-11.2 pontos</td>
+                </tr>
+            
+                <tr>
+                    <td>NUNO</td>
+                    <td>PRIORIDADE, APREENDIDO, ANÁLISE, OUTROS ACORDOS, PRIORIDADE TOTAL</td>
+                    <td>-15.0 pontos</td>
+                </tr>
+            
+                <tr>
+                    <td>AMANDA SANTANA</td>
+                    <td>OUTROS ACORDOS, ANÁLISE, PRIORIDADE, APREENDIDO</td>
+                    <td>-13.3 pontos</td>
+                </tr>
+            
+                <tr>
+                    <td>JULIA</td>
+                    <td>APREENDIDO, PRIORIDADE, ANÁLISE, PRIORIDADE TOTAL</td>
+                    <td>-13.3 pontos</td>
+                </tr>
+            
+                <tr>
+                    <td>KATIA</td>
+                    <td>PRIORIDADE, ANÁLISE, OUTROS ACORDOS, PRIORIDADE TOTAL</td>
+                    <td>-13.3 pontos</td>
+                </tr>
+            
+                <tr>
+                    <td>ALINE SALVADOR</td>
+                    <td>PRIORIDADE, APREENDIDO, OUTROS ACORDOS, PRIORIDADE TOTAL, ANÁLISE</td>
+                    <td>-15.0 pontos</td>
+                </tr>
+            
+            </table>
+        </div>
+        
+        <div class="section">
+            <h2>Distribuição de Situações</h2>
+            <div class="chart-container">
+    
+                <div class="chart">
+                    <h3>VITORIA</h3>
+                    <img src="situacao_VITORIA.png" alt="Distribuição de Situações - VITORIA">
+                </div>
+            
+                <div class="chart">
+                    <h3>VICTOR ADRIANO</h3>
+                    <img src="situacao_VICTOR_ADRIANO.png" alt="Distribuição de Situações - VICTOR ADRIANO">
+                </div>
+            
+                <div class="chart">
+                    <h3>ELISANGELA</h3>
+                    <img src="situacao_ELISANGELA.png" alt="Distribuição de Situações - ELISANGELA">
+                </div>
+            
+                <div class="chart">
+                    <h3>IGOR</h3>
+                    <img src="situacao_IGOR.png" alt="Distribuição de Situações - IGOR">
+                </div>
+            
+                <div class="chart">
+                    <h3>NUNO</h3>
+                    <img src="situacao_NUNO.png" alt="Distribuição de Situações - NUNO">
+                </div>
+            
+                <div class="chart">
+                    <h3>AMANDA SANTANA</h3>
+                    <img src="situacao_AMANDA_SANTANA.png" alt="Distribuição de Situações - AMANDA SANTANA">
+                </div>
+            
+                <div class="chart">
+                    <h3>JULIA</h3>
+                    <img src="situacao_JULIA.png" alt="Distribuição de Situações - JULIA">
+                </div>
+            
+                <div class="chart">
+                    <h3>KATIA</h3>
+                    <img src="situacao_KATIA.png" alt="Distribuição de Situações - KATIA">
+                </div>
+            
+                <div class="chart">
+                    <h3>ALINE SALVADOR</h3>
+                    <img src="situacao_ALINE_SALVADOR.png" alt="Distribuição de Situações - ALINE SALVADOR">
+                </div>
+            
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>Conclusões e Recomendações</h2>
+            <p>Após a validação das métricas, podemos concluir que:</p>
+            <ul>
+                <li>Os scores de qualidade foram calculados corretamente, considerando taxa de preenchimento (40%), padronização (30%) e consistência diária (30%).</li>
+                <li>Os principais problemas identificados estão relacionados à padronização dos valores na coluna SITUACAO.</li>
+                <li>Colaboradores com baixa consistência diária tendem a ter atualizações irregulares, o que impacta negativamente o score.</li>
+            </ul>
+            
+            <p>Recomendações para melhorar os scores:</p>
+            <ul>
+                <li>Garantir que todos os registros tenham a coluna SITUACAO preenchida.</li>
+                <li>Padronizar os valores da coluna SITUACAO para: PENDENTE, VERIFICADO, APROVADO, QUITADO, CANCELADO, EM ANÁLISE, CONCLUIDO.</li>
+                <li>Manter um ritmo constante de atualizações diárias para melhorar a consistência.</li>
+            </ul>
+        </div>
+        
+        <div class="footer">
+            <p>Relatório gerado automaticamente pelo sistema de Validação de Métricas</p>
+        </div>
+    </body>
+    </html>
+    

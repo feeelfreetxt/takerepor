@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wallet Digital - Diagramas Técnicos</title>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body { padding: 20px; background-color: #f8f9fa; }
+        .diagram-container { 
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+        h2 { color: #2c3e50; margin-bottom: 20px; }
+        .nav-tabs { margin-bottom: 20px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="mb-4">Wallet Digital - Planejamento Técnico</h1>
+        
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" data-bs-toggle="tab" href="#architecture">Arquitetura</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" href="#flow">Fluxo de Dados</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" href="#components">Componentes</a>
+            </li>
+        </ul>
+
+        <div class="tab-content">
+            <div class="tab-pane fade show active" id="architecture">
+                <div class="diagram-container">
+                    <h2>Arquitetura do Sistema</h2>
+                    <div class="mermaid">
+                        graph TB
+                            subgraph Frontend
+                            A[React/Next.js] --> B[Interface do Usuário]
+                            B --> C[Componentes]
+                            C --> D[Forms]
+                            C --> E[Dashboard]
+                            C --> F[Carteira]
+                            end
+                            
+                            subgraph Backend
+                            G[Node.js/Express] --> H[API REST]
+                            H --> I[Autenticação]
+                            H --> J[Processamento]
+                            H --> K[Validação]
+                            end
+                            
+                            subgraph Database
+                            L[(MongoDB)] --> M[Clientes]
+                            L --> N[Transações]
+                            L --> O[Acordos]
+                            end
+                            
+                            B --> H
+                            J --> L
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane fade" id="flow">
+                <div class="diagram-container">
+                    <h2>Fluxo de Processamento</h2>
+                    <div class="mermaid">
+                        sequenceDiagram
+                            participant U as Usuário
+                            participant F as Frontend
+                            participant B as Backend
+                            participant D as Database
+                            participant E as APIs Externas
+                            
+                            U->>F: Login
+                            F->>B: Autenticar
+                            B->>D: Verificar Credenciais
+                            D-->>B: Confirmação
+                            B-->>F: Token JWT
+                            
+                            U->>F: Criar Acordo
+                            F->>B: Enviar Dados
+                            B->>E: Validar Informações
+                            E-->>B: Confirmação
+                            B->>D: Salvar Acordo
+                            D-->>B: Sucesso
+                            B-->>F: Atualizar UI
+                            F-->>U: Confirmação
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane fade" id="components">
+                <div class="diagram-container">
+                    <h2>Componentes do Sistema</h2>
+                    <div class="mermaid">
+                        classDiagram
+                            class WalletSystem {
+                                +login()
+                                +processAgreement()
+                                +calculateValues()
+                                +generateReports()
+                            }
+                            
+                            class Client {
+                                +String name
+                                +String region
+                                +String category
+                                +getDetails()
+                                +updateStatus()
+                            }
+                            
+                            class Agreement {
+                                +Float value
+                                +Float discount
+                                +Date deadline
+                                +calculate()
+                                +approve()
+                            }
+                            
+                            class Transaction {
+                                +String type
+                                +Float amount
+                                +Date date
+                                +process()
+                                +validate()
+                            }
+                            
+                            WalletSystem --> Client
+                            WalletSystem --> Agreement
+                            WalletSystem --> Transaction
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        mermaid.initialize({ 
+            theme: 'default',
+            startOnLoad: true,
+            securityLevel: 'loose',
+            flowchart: { 
+                curve: 'basis',
+                useMaxWidth: true
+            }
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,635 @@
+{
+  "ultima_analise": "2025-03-01T19:38:59.313879",
+  "arquivos_analisados": [
+    "uploads\\(LEANDRO_ADRIANO) LISTAS INDIVIDUAIS.xlsx",
+    "uploads\\(JULIO) LISTAS INDIVIDUAIS.xlsx"
+  ],
+  "resultados": {
+    "julio": {
+      "ANA GESSICA": {
+        "nome": "ANA GESSICA",
+        "total_registros": 708,
+        "distribuicao_status": {
+          "PENDENTE": 507,
+          "VERIFICADO": 83,
+          "APROVADO": 54,
+          "QUITADO": 22,
+          "CANCELADO": 15,
+          "PRIORIDADE": 13,
+          "AN\u00c1LISE": 6,
+          "APREENDIDO": 4,
+          "OUTROS ACORDOS": 3,
+          "PRIORIDADE TOTAL": 1,
+          "CONCLUIDO": 0,
+          "EM ANDAMENTO": 0
+        },
+        "taxa_eficiencia": 0.0,
+        "tempo_medio_resolucao": null,
+        "tendencia": {
+          "direcao": "est\u00e1vel",
+          "valor": 0
+        },
+        "ultima_atualizacao": "2025-03-01T18:31:28.600983"
+      },
+      "ANA LIDIA": {
+        "nome": "ANA LIDIA",
+        "total_registros": 712,
+        "distribuicao_status": {
+          "PENDENTE": 494,
+          "APROVADO": 69,
+          "VERIFICADO": 61,
+          "QUITADO": 40,
+          "CANCELADO": 27,
+          "PRIORIDADE": 9,
+          "APREENDIDO": 6,
+          "AN\u00c1LISE": 4,
+          "OUTROS ACORDOS": 1,
+          "PRIORIDADE TOTAL": 1,
+          "CONCLUIDO": 0,
+          "EM ANDAMENTO": 0
+        },
+        "taxa_eficiencia": 0.0,
+        "tempo_medio_resolucao": null,
+        "tendencia": {
+          "direcao": "crescente",
+          "valor": 709.9999999999998
+        },
+        "ultima_atualizacao": "2025-03-01T18:31:28.707893"
+      },
+      "JULIANE": {
+        "nome": "JULIANE",
+        "total_registros": 648,
+        "distribuicao_status": {
+          "PENDENTE": 513,
+          "VERIFICADO": 60,
+          "QUITADO": 27,
+          "APROVADO": 23,
+          "PRIORIDADE": 12,
+          "AN\u00c1LISE": 6,
+          "CANCELADO": 3,
+          "APREENDIDO": 2,
+          "PRIORIDADE TOTAL": 1,
+          "OUTROS ACORDOS": 1,
+          "CONCLUIDO": 0,
+          "EM ANDAMENTO": 0
+        },
+        "taxa_eficiencia": 0.0,
+        "tempo_medio_resolucao": null,
+        "tendencia": {
+          "direcao": "crescente",
+          "valor": 645.9999999999999
+        },
+        "ultima_atualizacao": "2025-03-01T18:31:28.812212"
+      },
+      "FELIPE": {
+        "nome": "FELIPE",
+        "total_registros": 648,
+        "distribuicao_status": {
+          "PENDENTE": 403,
+          "APROVADO": 109,
+          "VERIFICADO": 74,
+          "QUITADO": 28,
+          "CANCELADO": 20,
+          "OUTROS ACORDOS": 6,
+          "APREENDIDO": 3,
+          "AN\u00c1LISE": 2,
+          "PRIORIDADE": 2,
+          "M.ENCAMINHADA": 1,
+          "CONCLUIDO": 0,
+          "EM ANDAMENTO": 0
+        },
+        "taxa_eficiencia": 0.0,
+        "tempo_medio_resolucao": null,
+        "tendencia": {
+          "direcao": "crescente",
+          "valor": 645.9999999999999
+        },
+        "ultima_atualizacao": "2025-03-01T18:31:28.972568"
+      },
+      "LUARA": {
+        "nome": "LUARA",
+        "total_registros": 713,
+        "distribuicao_status": {
+          "PENDENTE": 601,
+          "VERIFICADO": 39,
+          "APROVADO": 36,
+          "QUITADO": 24,
+          "CANCELADO": 3,
+          "OUTROS ACORDOS": 3,
+          "PRIORIDADE": 3,
+          "APREENDIDO": 2,
+          "AN\u00c1LISE": 1,
+          "PRIORIDADE TOTAL": 1,
+          "CONCLUIDO": 0,
+          "EM ANDAMENTO": 0
+        },
+        "taxa_eficiencia": 0.0,
+        "tempo_medio_resolucao": null,
+        "tendencia": {
+          "direcao": "crescente",
+          "valor": 710.9999999999998
+        },
+        "ultima_atualizacao": "2025-03-01T18:31:29.091603"
+      },
+      "MATHEUS": {
+        "nome": "MATHEUS",
+        "total_registros": 648,
+        "distribuicao_status": {
+          "PENDENTE": 466,
+          "VERIFICADO": 65,
+          "APROVADO": 54,
+          "QUITADO": 37,
+          "CANCELADO": 15,
+          "PRIORIDADE": 3,
+          "APREENDIDO": 3,
+          "AN\u00c1LISE": 3,
+          "OUTROS ACORDOS": 2,
+          "CONCLUIDO": 0,
+          "EM ANDAMENTO": 0
+        },
+        "taxa_eficiencia": 0.0,
+        "tempo_medio_resolucao": null,
+        "tendencia": {
+          "direcao": "crescente",
+          "valor": 641.9999999999999
+        },
+        "ultima_atualizacao": "2025-03-01T18:31:29.190350"
+      },
+      "NUNO": {
+        "nome": "NUNO",
+        "total_registros": 701,
+        "distribuicao_status": {
+          "PENDENTE": 530,
+          "VERIFICADO": 59,
+          "APROVADO": 46,
+          "QUITADO": 27,
+          "CANCELADO": 22,
+          "PRIORIDADE": 5,
+          "APREENDIDO": 4,
+          "AN\u00c1LISE": 4,
+          "OUTROS ACORDOS": 3,
+          "PRIORIDADE TOTAL": 1,
+          "CONCLUIDO": 0,
+          "EM ANDAMENTO": 0
+        },
+        "taxa_eficiencia": 0.0,
+        "tempo_medio_resolucao": null,
+        "tendencia": {
+          "direcao": "crescente",
+          "valor": 698.9999999999998
+        },
+        "ultima_atualizacao": "2025-03-01T18:31:29.294432"
+      },
+      "ELISANGELA": {
+        "nome": "ELISANGELA",
+        "total_registros": 648,
+        "distribuicao_status": {
+          "PENDENTE": 510,
+          "VERIFICADO": 54,
+          "APROVADO": 40,
+          "QUITADO": 20,
+          "CANCELADO": 10,
+          "APREENDIDO": 7,
+          "AN\u00c1LISE": 5,
+          "OUTROS ACORDOS": 2,
+          "CONCLUIDO": 0,
+          "EM ANDAMENTO": 0
+        },
+        "taxa_eficiencia": 0.0,
+        "tempo_medio_resolucao": null,
+        "tendencia": {
+          "direcao": "est\u00e1vel",
+          "valor": 0
+        },
+        "ultima_atualizacao": "2025-03-01T18:31:29.391858"
+      },
+      "THALISSON": {
+        "nome": "THALISSON",
+        "total_registros": 705,
+        "distribuicao_status": {
+          "PENDENTE": 560,
+          "VERIFICADO": 58,
+          "APROVADO": 39,
+          "QUITADO": 35,
+          "AN\u00c1LISE": 6,
+          "OUTROS ACORDOS": 3,
+          "CANCELADO": 2,
+          "APREENDIDO": 1,
+          "PRIORIDADE": 1,
+          "CONCLUIDO": 0,
+          "EM ANDAMENTO": 0
+        },
+        "taxa_eficiencia": 0.0,
+        "tempo_medio_resolucao": null,
+        "tendencia": {
+          "direcao": "crescente",
+          "valor": 700.9999999999999
+        },
+        "ultima_atualizacao": "2025-03-01T18:31:29.493325"
+      },
+      "VICTOR ADRIANO": {
+        "nome": "VICTOR ADRIANO",
+        "total_registros": 556,
+        "distribuicao_status": {
+          "PENDENTE": 483,
+          "QUITADO": 23,
+          "VERIFICADO": 19,
+          "APROVADO": 16,
+          "PRIORIDADE": 9,
+          "AN\u00c1LISE": 4,
+          "CANCELADO": 1,
+          "NAN": 1,
+          "CONCLUIDO": 0,
+          "EM ANDAMENTO": 0
+        },
+        "taxa_eficiencia": 0.0,
+        "tempo_medio_resolucao": null,
+        "tendencia": {
+          "direcao": "est\u00e1vel",
+          "valor": 0
+        },
+        "ultima_atualizacao": "2025-03-01T18:31:29.587084"
+      },
+      "POLIANA": {
+        "nome": "POLIANA",
+        "total_registros": 649,
+        "distribuicao_status": {
+          "PENDENTE": 363,
+          "APROVADO": 108,
+          "VERIFICADO": 90,
+          "QUITADO": 48,
+          "CANCELADO": 17,
+          "AN\u00c1LISE": 9,
+          "PRIORIDADE": 7,
+          "APREENDIDO": 4,
+          "OUTROS ACORDOS": 3,
+          "CONCLUIDO": 0,
+          "EM ANDAMENTO": 0
+        },
+        "taxa_eficiencia": 0.0,
+        "tempo_medio_resolucao": null,
+        "tendencia": {
+          "direcao": "crescente",
+          "valor": 644.9999999999999
+        },
+        "ultima_atualizacao": "2025-03-01T18:31:29.689558"
+      },
+      "IGOR": {
+        "nome": "IGOR",
+        "total_registros": 648,
+        "distribuicao_status": {
+          "PENDENTE": 552,
+          "VERIFICADO": 25,
+          "PRIORIDADE": 22,
+          "QUITADO": 15,
+          "APROVADO": 15,
+          "AN\u00c1LISE": 11,
+          "CANCELADO": 6,
+          "PRIORIDADE TOTAL": 2,
+          "CONCLUIDO": 0,
+          "EM ANDAMENTO": 0
+        },
+        "taxa_eficiencia": 0.0,
+        "tempo_medio_resolucao": null,
+        "tendencia": {
+          "direcao": "crescente",
+          "valor": 645.9999999999999
+        },
+        "ultima_atualizacao": "2025-03-01T18:31:29.791816"
+      }
+    },
+    "leandro": {
+      "AMANDA SANTANA": {
+        "nome": "AMANDA SANTANA",
+        "total_registros": 656,
+        "distribuicao_status": {
+          "PENDENTE": 437,
+          "APROVADO": 81,
+          "VERIFICADO": 60,
+          "QUITADO": 37,
+          "CANCELADO": 25,
+          "OUTROS ACORDOS": 8,
+          "PRIORIDADE": 4,
+          "AN\u00c1LISE": 2,
+          "APREENDIDO": 2,
+          "CONCLUIDO": 0,
+          "EM ANDAMENTO": 0
+        },
+        "taxa_eficiencia": 0.0,
+        "tempo_medio_resolucao": null,
+        "tendencia": {
+          "direcao": "crescente",
+          "valor": 65.20000000000002
+        },
+        "ultima_atualizacao": "2025-03-01T19:38:57.853170"
+      },
+      "EDIANE": {
+        "nome": "EDIANE",
+        "total_registros": 652,
+        "distribuicao_status": {
+          "PENDENTE": 458,
+          "VERIFICADO": 112,
+          "QUITADO": 31,
+          "APROVADO": 25,
+          "CANCELADO": 12,
+          "OUTROS ACORDOS": 4,
+          "AN\u00c1LISE": 4,
+          "PRIORIDADE": 3,
+          "APREENDIDO": 3,
+          "CONCLUIDO": 0,
+          "EM ANDAMENTO": 0
+        },
+        "taxa_eficiencia": 0.0,
+        "tempo_medio_resolucao": null,
+        "tendencia": {
+          "direcao": "crescente",
+          "valor": 647.9999999999999
+        },
+        "ultima_atualizacao": "2025-03-01T19:38:57.949045"
+      },
+      "BRUNO ": {
+        "nome": "BRUNO ",
+        "total_registros": 653,
+        "distribuicao_status": {
+          "PENDENTE": 453,
+          "VERIFICADO": 64,
+          "APROVADO": 54,
+          "QUITADO": 34,
+          "CANCELADO": 29,
+          "OUTROS ACORDOS": 8,
+          "PRIORIDADE": 6,
+          "APREENDIDO": 5,
+          "CONCLUIDO": 0,
+          "EM ANDAMENTO": 0
+        },
+        "taxa_eficiencia": 0.0,
+        "tempo_medio_resolucao": null,
+        "tendencia": {
+          "direcao": "crescente",
+          "valor": 650.9999999999999
+        },
+        "ultima_atualizacao": "2025-03-01T19:38:58.044798"
+      },
+      "ALINE SALVADOR": {
+        "nome": "ALINE SALVADOR",
+        "total_registros": 650,
+        "distribuicao_status": {
+          "PENDENTE": 519,
+          "VERIFICADO": 54,
+          "APROVADO": 40,
+          "QUITADO": 20,
+          "PRIORIDADE": 6,
+          "CANCELADO": 5,
+          "APREENDIDO": 3,
+          "OUTROS ACORDOS": 1,
+          "PRIORIDADE TOTAL": 1,
+          "AN\u00c1LISE": 1,
+          "CONCLUIDO": 0,
+          "EM ANDAMENTO": 0
+        },
+        "taxa_eficiencia": 0.0,
+        "tempo_medio_resolucao": null,
+        "tendencia": {
+          "direcao": "crescente",
+          "valor": 647.9999999999998
+        },
+        "ultima_atualizacao": "2025-03-01T19:38:58.168152"
+      },
+      "FABIANA": {
+        "nome": "FABIANA",
+        "total_registros": 652,
+        "distribuicao_status": {
+          "PENDENTE": 460,
+          "VERIFICADO": 71,
+          "APROVADO": 46,
+          "QUITADO": 37,
+          "CANCELADO": 18,
+          "OUTROS ACORDOS": 8,
+          "PRIORIDADE": 7,
+          "APREENDIDO": 3,
+          "AN\u00c1LISE": 2,
+          "CONCLUIDO": 0,
+          "EM ANDAMENTO": 0
+        },
+        "taxa_eficiencia": 0.0,
+        "tempo_medio_resolucao": null,
+        "tendencia": {
+          "direcao": "crescente",
+          "valor": 647.9999999999999
+        },
+        "ultima_atualizacao": "2025-03-01T19:38:58.263916"
+      },
+      "MARIA BRUNA": {
+        "nome": "MARIA BRUNA",
+        "total_registros": 649,
+        "distribuicao_status": {
+          "PENDENTE": 450,
+          "VERIFICADO": 98,
+          "APROVADO": 62,
+          "QUITADO": 27,
+          "CANCELADO": 7,
+          "AN\u00c1LISE": 3,
+          "APREENDIDO": 2,
+          "CONCLUIDO": 0,
+          "EM ANDAMENTO": 0
+        },
+        "taxa_eficiencia": 0.0,
+        "tempo_medio_resolucao": null,
+        "tendencia": {
+          "direcao": "est\u00e1vel",
+          "valor": 0
+        },
+        "ultima_atualizacao": "2025-03-01T19:38:58.381310"
+      },
+      "ITAYNNARA": {
+        "nome": "ITAYNNARA",
+        "total_registros": 650,
+        "distribuicao_status": {
+          "PENDENTE": 398,
+          "APROVADO": 98,
+          "VERIFICADO": 87,
+          "CANCELADO": 30,
+          "QUITADO": 26,
+          "OUTROS ACORDOS": 5,
+          "APREENDIDO": 4,
+          "AN\u00c1LISE": 1,
+          "PRIORIDADE": 1,
+          "CONCLUIDO": 0,
+          "EM ANDAMENTO": 0
+        },
+        "taxa_eficiencia": 0.0,
+        "tempo_medio_resolucao": null,
+        "tendencia": {
+          "direcao": "crescente",
+          "valor": 643.9999999999999
+        },
+        "ultima_atualizacao": "2025-03-01T19:38:58.514445"
+      },
+      "MONYZA": {
+        "nome": "MONYZA",
+        "total_registros": 649,
+        "distribuicao_status": {
+          "PENDENTE": 305,
+          "PRIORIDADE": 118,
+          "VERIFICADO": 111,
+          "APROVADO": 52,
+          "CANCELADO": 25,
+          "QUITADO": 21,
+          "OUTROS ACORDOS": 7,
+          "APREENDIDO": 6,
+          "AN\u00c1LISE": 4,
+          "CONCLUIDO": 0,
+          "EM ANDAMENTO": 0
+        },
+        "taxa_eficiencia": 0.0,
+        "tempo_medio_resolucao": null,
+        "tendencia": {
+          "direcao": "crescente",
+          "valor": 644.9999999999999
+        },
+        "ultima_atualizacao": "2025-03-01T19:38:58.651891"
+      },
+      "JULIANA": {
+        "nome": "JULIANA",
+        "total_registros": 649,
+        "distribuicao_status": {
+          "PENDENTE": 509,
+          "VERIFICADO": 57,
+          "QUITADO": 25,
+          "APROVADO": 22,
+          "OUTROS ACORDOS": 16,
+          "CANCELADO": 14,
+          "APREENDIDO": 3,
+          "PRIORIDADE": 3,
+          "CONCLUIDO": 0,
+          "EM ANDAMENTO": 0
+        },
+        "taxa_eficiencia": 0.0,
+        "tempo_medio_resolucao": null,
+        "tendencia": {
+          "direcao": "crescente",
+          "valor": 636.9999999999999
+        },
+        "ultima_atualizacao": "2025-03-01T19:38:58.836319"
+      },
+      "IZABEL": {
+        "nome": "IZABEL",
+        "total_registros": 650,
+        "distribuicao_status": {
+          "PENDENTE": 558,
+          "VERIFICADO": 33,
+          "QUITADO": 22,
+          "APROVADO": 18,
+          "PRIORIDADE": 8,
+          "CANCELADO": 7,
+          "APREENDIDO": 2,
+          "OUTROS ACORDOS": 1,
+          "AN\u00c1LISE": 1,
+          "CONCLUIDO": 0,
+          "EM ANDAMENTO": 0
+        },
+        "taxa_eficiencia": 0.0,
+        "tempo_medio_resolucao": null,
+        "tendencia": {
+          "direcao": "crescente",
+          "valor": 647.9999999999998
+        },
+        "ultima_atualizacao": "2025-03-01T19:38:58.929645"
+      },
+      "VITORIA": {
+        "nome": "VITORIA",
+        "total_registros": 89,
+        "distribuicao_status": {
+          "PENDENTE": 29,
+          "VERIFICADO": 25,
+          "QUITADO": 14,
+          "APROVADO": 9,
+          "CANCELADO": 8,
+          "PRIORIDADE": 4,
+          "CONCLUIDO": 0,
+          "EM ANDAMENTO": 0
+        },
+        "taxa_eficiencia": 0.0,
+        "tempo_medio_resolucao": null,
+        "tendencia": {
+          "direcao": "crescente",
+          "valor": 80.99999999999997
+        },
+        "ultima_atualizacao": "2025-03-01T19:38:58.950638"
+      },
+      "JULIA": {
+        "nome": "JULIA",
+        "total_registros": 649,
+        "distribuicao_status": {
+          "PENDENTE": 469,
+          "VERIFICADO": 72,
+          "APROVADO": 61,
+          "CANCELADO": 23,
+          "QUITADO": 16,
+          "PRIORIDADE": 5,
+          "APREENDIDO": 1,
+          "AN\u00c1LISE": 1,
+          "PRIORIDADE TOTAL": 1,
+          "CONCLUIDO": 0,
+          "EM ANDAMENTO": 0
+        },
+        "taxa_eficiencia": 0.0,
+        "tempo_medio_resolucao": null,
+        "tendencia": {
+          "direcao": "crescente",
+          "valor": 646.9999999999999
+        },
+        "ultima_atualizacao": "2025-03-01T19:38:59.072281"
+      },
+      "KATIA": {
+        "nome": "KATIA",
+        "total_registros": 651,
+        "distribuicao_status": {
+          "PENDENTE": 505,
+          "APROVADO": 49,
+          "VERIFICADO": 48,
+          "QUITADO": 22,
+          "CANCELADO": 9,
+          "PRIORIDADE": 8,
+          "OUTROS ACORDOS": 6,
+          "AN\u00c1LISE": 2,
+          "PRIORIDADE TOTAL": 2,
+          "CONCLUIDO": 0,
+          "EM ANDAMENTO": 0
+        },
+        "taxa_eficiencia": 0.0,
+        "tempo_medio_resolucao": null,
+        "tendencia": {
+          "direcao": "est\u00e1vel",
+          "valor": 0
+        },
+        "ultima_atualizacao": "2025-03-01T19:38:59.193270"
+      },
+      "GREICY": {
+        "nome": "GREICY",
+        "total_registros": 649,
+        "distribuicao_status": {
+          "PENDENTE": 561,
+          "VERIFICADO": 30,
+          "APROVADO": 17,
+          "QUITADO": 12,
+          "PRIORIDADE": 12,
+          "CANCELADO": 11,
+          "OUTROS ACORDOS": 3,
+          "AN\u00c1LISE": 2,
+          "NAN": 1,
+          "CONCLUIDO": 0,
+          "EM ANDAMENTO": 0
+        },
+        "taxa_eficiencia": 0.0,
+        "tempo_medio_resolucao": null,
+        "tendencia": {
+          "direcao": "crescente",
+          "valor": 646.9999999999999
+        },
+        "ultima_atualizacao": "2025-03-01T19:38:59.311868"
+      }
+    }
+  },
+  "erros": []
+}

@@ -1,0 +1,19 @@
+{
+  "tendencias": {
+    "eficiencia": {},
+    "volume": {},
+    "tempo_resolucao": {}
+  },
+  "gargalos": {
+    "tempo_resolucao": [],
+    "eficiencia_baixa": [],
+    "volume_alto": [],
+    "pendencias_altas": []
+  },
+  "previsoes": {
+    "carga_trabalho": {},
+    "eficiencia_projetada": {},
+    "tempo_resolucao_projetado": {}
+  },
+  "ultima_analise": "2025-03-01T17:19:45.764776"
+}

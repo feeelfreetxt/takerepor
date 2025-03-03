@@ -1,0 +1,117 @@
+/* Estilos gerais */
+body {
+    background-color: #f8f9fa;
+}
+
+/* Navbar personalizada */
+.navbar {
+    box-shadow: 0 2px 4px rgba(0,0,0,.1);
+}
+
+/* Cards */
+.card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,.05);
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* KPI Cards */
+.card-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+.card-subtitle {
+    font-size: 0.9rem;
+    color: #6c757d;
+}
+
+.progress {
+    height: 6px;
+    margin-top: 10px;
+}
+
+/* Filtros */
+.form-select, .form-control {
+    border-radius: 8px;
+}
+
+/* Tabela */
+.table {
+    font-size: 0.9rem;
+}
+
+.table thead th {
+    background-color: #f8f9fa;
+    border-top: none;
+}
+
+/* Gráficos */
+#statusChart, #timelineChart {
+    height: 300px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .col-md-3 {
+        margin-bottom: 1rem;
+    }
+}
+
+/* Animações */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.card {
+    animation: fadeIn 0.5s ease-in;
+}
+
+/* Cores personalizadas para status */
+.status-pendente { color: #ffc107; }
+.status-verificado { color: #28a745; }
+.status-analise { color: #17a2b8; }
+.status-prioridade { color: #dc3545; }
+
+/* Botões e interações */
+.btn-primary {
+    background-color: #0d6efd;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 8px;
+}
+
+.btn-primary:hover {
+    background-color: #0b5ed7;
+    transform: translateY(-1px);
+}
+
+/* Tooltips personalizados */
+.tooltip {
+    font-size: 0.8rem;
+}
+
+/* Scrollbar personalizada */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}

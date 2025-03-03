@@ -1,0 +1,77 @@
+
+================================================================================
+RELATÓRIO DE MELHORIAS NA QUALIDADE DA ANÁLISE
+================================================================================
+Data: 03/03/2025 04:18:02
+Total de Colaboradores Analisados: 26
+Colaboradores com Problemas Identificados: 25 (96.2%)
+Gráficos Gerados: 25
+
+--------------------------------------------------------------------------------
+PROBLEMAS MAIS COMUNS
+--------------------------------------------------------------------------------
+- Baixa consistência nas atualizações diárias: 23 ocorrências
+- 56 registros com SITUACAO vazia: 3 ocorrências
+- 4 valores não padronizados: OUTROS ACORDOS, ANÁLISE, PRIORIDADE, APREENDIDO: 2 ocorrências
+- 54 registros com SITUACAO vazia: 2 ocorrências
+- Não há coluna de DATA para análise temporal: 2 ocorrências
+- 5 valores não padronizados: ANÁLISE, PRIORIDADE, APREENDIDO, OUTROS ACORDOS, PRIORIDADE TOTAL: 1 ocorrências
+- 5 valores não padronizados: APREENDIDO, PRIORIDADE, ANÁLISE, OUTROS ACORDOS, PRIORIDADE TOTAL: 1 ocorrências
+- 5 valores não padronizados: ANÁLISE, APREENDIDO, PRIORIDADE, PRIORIDADE TOTAL, OUTROS ACORDOS: 1 ocorrências
+- 4 valores não padronizados: PRIORIDADE, APREENDIDO, ANÁLISE, OUTROS ACORDOS: 1 ocorrências
+- 5 valores não padronizados: APREENDIDO, OUTROS ACORDOS, M.ENCAMINHADA, ANÁLISE, PRIORIDADE: 1 ocorrências
+
+--------------------------------------------------------------------------------
+SUGESTÕES DE MELHORIA
+--------------------------------------------------------------------------------
+- Padronizar valores de SITUACAO para: PENDENTE, VERIFICADO, APROVADO, QUITADO, CANCELADO, EM ANÁLISE: 25 ocorrências
+- Manter ritmo constante de atualizações diárias: 23 ocorrências
+- Preencher todos os campos de SITUACAO: 8 ocorrências
+- Adicionar coluna de DATA para permitir análise de atualizações diárias: 2 ocorrências
+
+--------------------------------------------------------------------------------
+TRANSIÇÕES DE ESTADO MAIS COMUNS
+--------------------------------------------------------------------------------
+- PENDENTE -> VERIFICADO: 636 ocorrências
+- VERIFICADO -> PENDENTE: 633 ocorrências
+- APROVADO -> PENDENTE: 547 ocorrências
+- PENDENTE -> APROVADO: 544 ocorrências
+- QUITADO -> PENDENTE: 360 ocorrências
+- PENDENTE -> QUITADO: 344 ocorrências
+- CANCELADO -> PENDENTE: 213 ocorrências
+- PENDENTE -> CANCELADO: 206 ocorrências
+- APROVADO -> VERIFICADO: 201 ocorrências
+- VERIFICADO -> APROVADO: 196 ocorrências
+
+--------------------------------------------------------------------------------
+TEMPO MÉDIO EM CADA SITUAÇÃO
+--------------------------------------------------------------------------------
+- M.ENCAMINHADA: 0.0 dias
+- APREENDIDO: 0.0 dias
+- PENDENTE: 0.0 dias
+- CANCELADO: 0.1 dias
+- QUITADO: 0.2 dias
+- APROVADO: 0.2 dias
+- OUTROS ACORDOS: 0.3 dias
+- ANÁLISE: 0.4 dias
+- PRIORIDADE TOTAL: 0.4 dias
+- VERIFICADO: 0.5 dias
+- PRIORIDADE: 4.2 dias
+
+--------------------------------------------------------------------------------
+TOP 5 COLABORADORES (MELHOR QUALIDADE)
+--------------------------------------------------------------------------------
+1. VITORIA: 65.0 pontos
+2. VICTOR ADRIANO: 61.4 pontos
+3. ELISANGELA: 58.8 pontos
+4. IGOR: 58.8 pontos
+5. BRUNO : 58.8 pontos
+
+--------------------------------------------------------------------------------
+COLABORADORES QUE PRECISAM DE ATENÇÃO (PIOR QUALIDADE)
+--------------------------------------------------------------------------------
+1. NUNO: 55.0 pontos
+2. AMANDA SANTANA: 54.0 pontos
+3. JULIA: 53.5 pontos
+4. KATIA: 53.5 pontos
+5. ALINE SALVADOR: 51.9 pontos
